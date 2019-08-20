@@ -1,0 +1,21 @@
+  <div class="col-md-6 col-lg-6 col-xl-6">
+    <div class="card mb-3">
+      <div class="row no-gutters person">
+        <div class="portrait">
+          <img onclick="window.open('{{ person.web }}');" src="{% if person.portrait %}{{site.url}}/img/{{ person.portrait}}{% elsif person.extportrait %}{{ person.extportrait }}{% else %}{{site.url}}/img/anonymous.jpg{% endif %}" class="card-img" alt="...">
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <h4>{{person.name}}<small><BR>{{person.engName}}{%if person.engName and person.degree%}, {%endif%}{{person.degree}}</small></h4>
+            {% if person.e-mail %} <a href='mailto:{{person.e-mail}}'><i class="far fa-envelope"></i></a>{% endif %}{% if person.web %} <a href='{{person.web}}'><i class="fas fa-home"></i></a>{% endif %}{% if person.scopus %} <a href='https://www.scopus.com/authid/detail.uri?authorId={{person.scopus}}'><i class="fas fa-book"></i></a>{% endif %}{% if person.linked %} <a href='https://www.linkedin.com/in/{{person.linked}}'><i class="fab fa-linkedin"></i></a>{% endif %}{% if person.fb %} <a href='https://www.facebook.com/{{person.fb}}'><i class="fab fa-facebook-square"></i></a>{% endif %}{% if person.orcid %} <a itemprop="sameAs" content="https://orcid.org/{{person.orcid}}" href="https://orcid.org/{{person.orcid}}" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon"></a>{% endif %}{% if person.twitter %} <a href='https://twitter.com/{{person.twitter}}'><i class="fab fa-twitter-square"></i></a>{% endif %}{% if person.instagram %} <a href='https://www.instagram.com/{{person.instagram}}'><i class="fab fa-instagram"></i></a>{% endif %}
+          </div>
+          <div class="card-text">
+            <P>{{person.bio}}</p>
+          </div>
+          <div class="jobtitle">
+            <code>{{person.jobtitle}}</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

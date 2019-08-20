@@ -1,0 +1,177 @@
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+	background-color: transparent;
+
+	&:active,
+    &:visited { color: darken($brand-color, 15%); }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+        outline: 0;
+    }
+    //.backlink {color: $scarlet}
+}
+
+#notice {
+    .jumbotron {
+        h1 { color: whitesmoke; }
+        color: $Behr17-01;
+        background-color: $Behr17-17;
+        a { color: $cornflower;
+            &:hover { color: $jungle-green;}
+        }
+    }
+}
+
+#content {
+	a:current {color: #194683;}
+	a.nonexistent:visited,
+	a.nonexistent,
+	a.badinterwiki:visited,
+	a.badinterwiki {
+		color: #999;
+	}
+}
+
+article {
+    header {
+        h1 {
+            //border-radius: 6px;
+            //color: $periwinkle; background-color: $cerulean;
+            text-shadow: 1px 1px 1px rgba(125,125,125,.5);
+            //min-width: none; width: none;
+            //padding: 5px;
+        }
+    }
+}
+
+.members {
+	background-color: $Grey50;
+  .card {
+    .person {
+      box-shadow: 0 2px 10px rgba(25, 25, 25, $alpha);
+      -webkit-box-shadow: 0 2px 10px rgba(25, 25, 25, $alpha);
+      -moz-box-shadow: 0 2px 10px rgba(25, 25, 25, $alpha);
+      border-collapse: separate;
+      .portrait { background-color: white;}
+      .card-body {
+        background-color: #F3F3F3;
+        .jobtitle {
+          code {
+            color: $periwinkle; background-color: $cerulean;
+            text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+.post-content {
+    iframe, #map {
+        border:0;
+        -webkit-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+        -moz-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+        box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+    }
+}
+
+.post-meta {
+    color: $grey;
+}
+
+#home, #tour {
+    h1 { text-shadow: 1px 1px 1px rgba(125,125,125,.5); }
+    img {
+        border:0;
+        -webkit-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+        -moz-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+        box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+    }
+}
+
+#publications {
+	.annual {
+		background-color: $text-color; //$background-color;
+		color: white; //$text-color;
+        -webkit-box-shadow: 1px 1px 10px #333;
+        -moz-box-shadow: 1px 1px 10px #333;
+        box-shadow: 1px 1px 10px #333;
+		.year-separator {
+			color: $unmelllow-yellow;
+		}
+		.authors { color: orange; }
+        .title {
+            a {
+                color: $cornflower;
+                &:hover { color: $cerulean; }
+            }
+        }
+    }
+}
+
+/**
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid $grey-dark;
+    border-bottom: 1px solid $grey-light;
+}
+
+.site-title {
+    &,
+    &:visited {
+        color: $grey-dark;
+    }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey;
+    border-left: 4px solid $grey-light;
+}
+
+
+pre {
+    border: 1px solid $grey-light;
+    background-color: #eef;
+}
+
+/**
+ * Icons
+ */
+.icon {
+    > svg {
+        path {
+            fill: $grey;
+        }
+    }
+}
+
+/* text decorations */
+.u {
+	text-decoration: underline;
+}
+.strike {
+    color: $grey;
+	text-decoration: line-through;
+}
+/* used in SpellCheck results */
+strong.highlight {
+    background-color: #cBe6fd;
+    padding: 1pt;
+}
+/* colored texts (low css priority) */
+.warning {
+    color: #a94442; /* Bootstrap .alert-danger */
+}
+.error {
+    color: #a94442;
+}

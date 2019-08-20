@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top">
+  <div class="container">
+    <div class="navbar-brand-wrapper">
+      <a class="navbar-brand mb-2 h1" href="/{% if page.language %}{{ page.language }}{% endif %}" title="Home">
+        <img class="logo" src="{{ site.logo | prepend: "/img/" | prepend: site.url}}" alt=""> {{ site.labname_short }}
+      </a>
+    </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenuBar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navMenuBar">
+    <ul class="navbar-nav ml-auto">
+      {% for my_page in site.pages %}
+        {% if my_page.title %}{% if my_page.language == page.language %}
+          {% assign pageUrlBase = my_page.url | split: "/" | last %}
+          {% if page.categories %}
+            {% for category in page.categories %}
+              {% assign category_downcase = category|downcase %}
+              {% if pageUrlBase == category_downcase  %}<li class="current">{% else %}<li>{% endif %}
+            {% endfor %}
+          {% else %}<li>
+          {% endif %}
+          <a class="nav-link" href="{{site.url}}/{% if page.language %}{{ page.language }}/{% endif %}{{ pageUrlBase }}">
+            <i class="fa fa-{{my_page.icon}}"></i>{{ my_page.categories | capitalize }}
+          </a>
+        </li>
+        {% endif %}{% endif %}
+      {% endfor %}
+    </ul>
+
+  </div>
+</nav>

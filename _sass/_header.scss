@@ -1,0 +1,196 @@
+$header-height: 38px;
+
+.navbar {
+  height: $header-height;
+  min-height: $header-height;
+  border: 0px solid transparent;
+  font-size: 14px;
+
+  padding-left: $grid-gutter-width/4;
+  padding-right: $grid-gutter-width/4;
+
+  a {
+      -webkit-transition: 0.2s ease;
+      transition: 0.2s ease;
+  }
+  .navbar-fixed-top_DELETE {
+      position: fixed;
+      right: 0; left: 0; top: 0;
+      z-index: 1030;
+      border-width: 0 0 1px;
+      max-height: $header-height;
+  }
+
+  .navbar-brand {
+    display: inline;
+    .logo {
+      height: $header-height - 6;
+    }
+    .navbar-btn {
+      margin: 3px 0;
+    }
+    font-family: 'Rock Salt', sans-serif, 'Noto Sans KR';
+    font-size: 1.3em;
+    float: left;
+    margin-left: 0em;
+    height: $header-height;
+    &:hover, &:focus { text-decoration: none; }
+  }
+
+  .navbar-toggler {
+    height: $header-height - 6;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 4px;
+    &:focus, &:active {
+      outline: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+  .navbar-nav li:hover > ul.dropdown-menu {
+      display: block;
+  }
+}
+
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:-100%;
+    margin-top:-6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+
+/*=========================================================
+   Responsive Theme
+===========================================================*/
+
+@media only screen and (max-width: $md - 1) {
+    .navbar {
+        flex-wrap: nowrap;
+        padding: 0;
+        .container {
+            //max-width: $phone - $grid-gutter-width / 2;
+            padding: 0 0.5em;
+            z-index: 101;
+            .navbar-brand-wrapper {
+              margin: auto;
+              padding-left: $navbar-height;
+              a { margin: auto;}
+            }
+          .navbar-collapse {
+            position: absolute;
+            right: 0px;
+            overflow-x: visible;
+            background-color: rgba(0,0,0,0.4);
+            color: red;
+            top: 0px;
+            margin-top: $header-height;
+            margin-right: $header-height/2;
+            z-index: -102;
+            transition: 0.1s cubic-bezier(0.5, 0.1, 0.51, 1.38);
+
+            //li { height: 2em; }
+            .navbar-nav {
+              overflow-x: visible;
+              width:10em;
+              .nav-link {
+                padding-left: 1.5em; color: white;
+              }
+              .dropdown-menu {
+                padding-top: 0;
+                padding-bottom: 0;
+                margin-left: -1em;
+                margin-right: 1em;
+                right: -1em;
+                background-color: rgba(0,0,0,0.3);
+                .dropdown-item {
+                  padding: 0.5em;
+                  padding-left: 1.5em; color: white;
+                }
+                .dropdown-menu {
+                  background-color: rgba(0,0,0,0.3);
+                  margin-right: 1em;
+                }
+              }
+            }
+          }
+          >.active{
+            background: #000;
+            color: #fff;
+          }
+          .nav-show{
+            visibility: visible;
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+    }
+}
+
+/* navbar is minified and made transparent-ish under sideway view on phones */
+@media screen and (max-width: 640px) and (orientation: landscape) {
+    #outbox {
+        padding-top: 50px;
+    }
+
+    .alert { /* to avoid the close button hiding behind minified navbar buttons */
+        margin-top: 20px;
+    }
+
+    .navbar-fixed-top.on .navbar-brand-wrapper {
+        display: block;
+    }
+    .navbar-fixed-top.on .sidebar-toggler {
+        border-radius: 4px;
+    }
+    .navbar-fixed-top.on .navbar-toggle {
+        border-radius: 4px;
+    }
+
+    #pagebox {
+        margin-top: -1 * $navbar-height;
+    }
+    .logo { display:none; }
+    .alert { /* to avoid the close button hiding behind minified navbar buttons */
+        margin-top: 20px;
+    }
+
+	/* when menu is uncollapsed */
+	.navbar-fixed-top {
+        left: auto;
+        right: 0;
+        background-image: none;
+        background-color: transparent;
+        border: none;
+
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        -webkit-transition: none !important;
+             -o-transition: none !important;
+                transition: none !important;
+    }
+
+    /* when menu is uncollapsed */
+    .navbar-fixed-top.on {
+		left: 0;
+        left: 1em;
+        border-width: 0 0 1px;
+        border-style: solid;
+        .navbar-brand-wrapper {
+        	display: none;
+        	.navbar-brand {
+    			display: none;
+    			background-color: #333;
+    			margin-right: 0.5em;
+    		}
+    	}
+    }
+}

@@ -1,1 +1,1 @@
-# lab-page-template
+# Lab Page template

@@ -1,0 +1,73 @@
+PI:
+- name: 나교수
+  engName: Gehoon Chung
+  degree: DDS, PhD
+  bio: Electrophysiology, Computational Biology
+  jobtitle: Associate Professor
+  portrait: gehoon.jpg
+  e-mail: gehoon@snu.ac.kr
+  web: https://wiki.snu.ac.kr/GehoonChung
+  scopus: 7102049033
+  orcid: 0000-0002-8036-0879
+  researcherID: C-5714-2008
+  loop: 406457
+  linked: gehoon
+  fb: byeongmin.lee.9
+  twitter: gehoon
+  instagram: gehoon
+
+Members:
+- name: 전학생
+  engName: Byeong-Min Lee
+  degree: DDS, BS
+  bio: Calcium Imaging, Alchemy
+  period: 2015/3-
+  jobtitle: DDS/PhD Student
+  portrait: BMLee.jpg
+  e-mail: bmjj88@snu.ac.kr
+  web:
+  scopus:
+  orcid:
+  researcherID:
+  loop:
+  linked:
+  fb: byeongmin.lee.9
+  twitter:
+  instagram:
+
+- name: 다른학생
+  engName: Next Student
+  degree: MS
+  bio: Electrophysiology, Molecular Biology
+  period: 2019/3-
+  jobtitle: PhD Student
+  portrait:
+  e-mail: donot@mail.com
+  web:
+  scopus:
+  orcid:
+  researcherID:
+  loop:
+  linked:
+  fb: byeongmin.lee.9
+  twitter:
+  instagram:
+
+Past:
+- name: 권민수
+  engName: Minsoo Kwon
+  degree: DDS, BS
+  period: 2011/9-2013/1
+  bio: Kyung Hee University Dental Hospital
+  jobtitle: Resident
+  portrait: Minsoo.jpg
+  e-mail: donot@mail.com
+  web:
+  scopus:
+  orcid:
+  researcherID:
+  loop:
+  linked: minsoo-kwon-1b609393
+  fb: byeongmin.lee.9
+  twitter:
+  instagram:
