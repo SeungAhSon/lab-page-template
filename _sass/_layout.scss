@@ -68,11 +68,14 @@
 #notice {
     .jumbotron {
         padding-top: 1em;
+        padding-bottom: 1em;
+        margin-bottom: 0.5em;
         p {
             font-family: 'Architects Daughter', 'Jeju Hallasan', 'Noto Sans KR', sans-serif ;
             font-weight: normal;
             font-style: normal;
             font-size: 1.5em;
+            margin-bottom: 1em;
         }
         a {text-decoration: none;}
     }
@@ -80,6 +83,16 @@
 
 #research {
   .card-img { max-width: 375px;   display: block;  margin: 0 auto; }
+}
+
+#project {
+  .card-header { min-height: 5em; }
+  .card-img-top { max-width: 375px;   display: block;  margin: 0 auto 1em; }
+}
+
+#project, #news {
+  .card-header { min-height: 5em; }
+  .card-img-top { max-width: 550px;   display: block;  margin: 0 auto 1em; }
 }
 
 #content {
@@ -242,7 +255,7 @@
  * Posts (sync)
  */
 
-.post-header {         font-family: 'Ruda', sans-serif, 'Noto Sans KR'; }
+.post-header {  font-family: 'Ruda', sans-serif, 'Noto Sans KR'; }
 
 .post-list {
     margin-left: 0;
@@ -267,19 +280,38 @@
     padding: 0;
 }
 
+.post-content {
+  .img-top {max-width: 600px; display: block;  margin: 0 auto 1em; }
+
+}
+
 #home {
 	h1 { margin-top: 0.7em; line-height: 1.2em;}
-    .col-xs-4 {
-        img {
-            max-height:300px;
-            margin: auto;
-            display: block;
-        }
-        @media screen and (max-width: 480px) {
-            padding-right: 5px;
-            padding-left: 5px;
-        }
+  .col-xs-4 {
+      img {
+          max-height:300px;
+          margin: auto;
+          display: block;
+      }
+      @media screen and (max-width: 480px) {
+          padding-right: 5px;
+          padding-left: 5px;
+      }
+  }
+  .overview {
+    font-size: 1.1em;
+  }
+  .news {
+    .card-img { max-width: 450px;   display: block;  margin: 0 auto 1em; }
+    .right {
+      height: 100%;
+      font-size: 1em;
+      background-color: #F0F0F0;
+      .card-text {
+        h1 { font-size: 1.2em;}
+      }
     }
+  }
 }
 
 #info {
@@ -289,7 +321,6 @@
         @media screen and (max-width: 640px) and (orientation: landscape) { height: 180px; }
     }
 }
-
 
 .members {
     @media screen and (max-width: 767px) { margin-right: 1em; margin-left: 1em; }
