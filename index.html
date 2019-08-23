@@ -4,7 +4,7 @@ layout: default
 
 <div id="home">
 	<header>
-		<h1>{{site.labname}}</h1>
+		<h1>{{site.title}}</h1>
 	</header>
 
   <div id="carouselIndicators" class="carousel slide shadow" data-ride="carousel">
@@ -82,5 +82,13 @@ layout: default
     <a href="{{ link.link }}"><button type="button" class="gcButton">{{ link.title }}</button></a>
     {% endfor %}
   </div>
+	{{paginator.per_page}}
+
+	{{paginator.total_posts}}
+
+	{{paginator.total_pages}}
+
+
+	<a href="{{paginator.next_page_path}}">{{paginator.next_page_path}}</a>
 
 </div>
