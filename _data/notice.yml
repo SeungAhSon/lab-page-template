@@ -1,0 +1,11 @@
+- status: open
+  title: Under active construction...
+  notice: Please visit <a href="http://dentistry.snu.ac.kr/enter/dentistry/basic/oph/">here</a>
+
+- status: close
+  title: Notice 2
+  notice: TEST 2
+
+- status: open
+  title: Notice 3
+  notice: TEST 3

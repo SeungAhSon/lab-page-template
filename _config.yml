@@ -10,7 +10,7 @@ labname: 계산신경과학연구실
 labname_short: ChungLab
 email: physi5logy@gmail.com
 logo: SNU_BL.png
-description: > # this means to ignore newlines until "baseurl:"
+description: > # 다음 줄에 연구실 소개 입력
   ChungLab of Computational Neuroscience, Seoul National University; 서울대학교 치과대학 정지훈 교수 감각신경 연구실; Gehoon Chung;
 baseurl: "" # the subpath of your site, e.g. /blog
 github_username:  ChungLab
@@ -18,6 +18,6 @@ google-site-verification:
 
 # Build settings
 markdown: kramdown
-include: ['_pages']
+include: ['_pages', '_projects']
 plugins:
   - jekyll-seo-tag

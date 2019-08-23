@@ -72,13 +72,11 @@ article {
   }
 }
 
-.post-content {
-    iframe, #map {
-        border:0;
-        -webkit-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
-        -moz-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
-        box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
-    }
+.shadow-dark {
+    border:0;
+    -webkit-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+    -moz-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+    box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
 }
 
 .post-meta {

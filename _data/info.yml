@@ -1,0 +1,26 @@
+affiliation:
+  - school: 치의학대학원 #단과대학
+    department: 구강생리학교실 #교실
+    program: 신경생물학전공 #전공
+
+  - school: 자연과학대학 #단과대학
+    department: #교실
+    program: 협동과정 뇌과학전공 #전공
+
+  - school: BK21+ #단과대학
+    department: 치의학생명과학사업단
+    program: #전공
+
+  - school: 치학연구소 #단과대학
+    department: #교실
+    program:  #전공
+
+address:
+  building: 병원 # 본관/재료/병원/관악 넷중 하나로 입력
+  office: 50x호
+  lab: 50x호
+
+phone:
+  office: 02-880-xxxx
+  lab: 02-880-xxxx
+  fax: 02-762-xxxx
