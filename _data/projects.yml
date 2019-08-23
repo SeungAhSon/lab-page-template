@@ -3,9 +3,11 @@
   title: 구강내 세균총을 이용한 질병 예측 기술 개발
   abstract: 지난 10년간의 <a href='https://en.wikipedia.org/wiki/Human_Microbiome_Project'>Human Microbiome Project</a> (미국 <a href='https://www.nih.gov/'>NIH</a>)의 결과로 장내미생물을 포함한 체내미생물이 우리 건강에 미치는 영향이 밝혀졌고, 후속 연구로 체내 미생물을 이용한 진단 및 치료기술이 바쁘게 추진되고 있다. 본 연구실에서는 분변을 이용한 장내 미생물총보다 얻기 쉬운 구강내 미생물총을 이용하여, <a href="https://www.snudh.org/portal/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000248&nttId=296&pageIndex=1&searchCnd=&searchWrd=&menuNo=25030000">구강작열감증후군</a> 등 기존의 기술로 원인 규명이 어려웠던 질환과 구강미생물총의 상관관계를 밝히고, 이를 기반으로 질환 발생기전, 진단 및 치료 방법을 제시하고자 한다.
   grantNo: NRF-2018R1D1A1B07049067
-  keywords: microbiome, pain, burning mouth syndrome
+  keywords: microbiome, pain, burning mouth syndrome, Test Keyword
 
 - icon: truck.png
+  fig: test-tube.png
   title: Microneedle 패치를 이용한 무통 국소마취제 개발
   abstract: 연세대학교 공과대학 <a href='https://web.yonsei.ac.kr/nanobiotech/Professor.htm'>정형일 교수</a> 연구팀과 연세대학교 치과대학 <a href='http://dentistry.yonsei.ac.kr/class/clinic_class/periodontics/teacher/docprofile.asp?sno=3006'>정의원 교수</a> 연구팀과 함께 국소마취제를 함유한 <a href='https://en.wikipedia.org/wiki/Transdermal_patch'>Microneedle 점막패치</a>를 개발중이다.
+  grantNo: 
   keywords: microneedle,local anesthesia
