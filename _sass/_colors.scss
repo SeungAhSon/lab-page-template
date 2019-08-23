@@ -87,14 +87,13 @@ article {
     color: $grey;
 }
 
-#home, #tour {
-    h1 { text-shadow: 1px 1px 1px rgba(125,125,125,.5); }
-    img {
-        border:0;
-        -webkit-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
-        -moz-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
-        box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+#home {
+  h1 { text-shadow: 1px 1px 1px rgba(125,125,125,.5); }
+  .news {
+    .right {
+      background-color: #F0F0F0;
     }
+  }
 }
 
 #publications {

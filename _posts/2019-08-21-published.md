@@ -3,6 +3,7 @@ layout: post
 title: Paper published!!
 subtitle: Improved oral hygiene care attenuates the cardiovascular risk of oral health disease
 date: 2018/12/18
+fig: https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/eurheartj/40/14/10.1093_eurheartj_ehy836/1/m_ehy836f4.png?Expires=1566648055&Signature=gbEkuVEElccEUi8YKi3~GgQX1EW7W9DOF5mAWE4--GNG170RKP55nf7HKINHvj9O5hepi7rTJbpTHeDlwE1oUqAYVebPK~qwRg9BwiSDKC2ssuuyRKI4TPhqBC0OlXbPOvbeDsSFkiOO1Cr8TrP0BUcYWqTPd8jj3HrCIKfnSPuopKyaNho1mTCwAhRbyCuhMBudkc4K01nZH7Ca-D6555XhdbNKpsTKmHmqmeiJp2jbCOTZsT24~2cAzcdEjRMWstHGQGnAmN6Vs10bJJ3y6NkfORdIc3m~v~Cwu7r1LwGNHZY9WLfLqdhiO8n0-daA7thXMmKcbbFbA7Z8At7T2A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
 link: https://doi.org/10.1093/eurheartj/ehy836
 published: true
 ---

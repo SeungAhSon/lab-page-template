@@ -7,7 +7,18 @@ layout: default
 		<h1>{{site.title}}</h1>
 	</header>
 
-  <div id="carouselIndicators" class="carousel slide shadow" data-ride="carousel">
+	{% for item in site.data.notice %}
+		{% if item.status == "open" %}
+			<div id="notice">
+				<div class="jumbotron">
+					<h1>{{ item.title }}</h1>
+					<p>{{ item.notice }}</p>
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}
+
+  <div id="carouselIndicators" class="carousel slide shadow mb-3" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselIndicators" data-slide-to="1"></li>
@@ -35,60 +46,52 @@ layout: default
     </a>
   </div>
 
-  <p>
-
-	{% for item in site.data.notice %}
-		{% if item.status == "open" %}
-			<div id="notice">
-				<div class="jumbotron">
-					<h1>{{ item.title }}</h1>
-					<p>{{ item.notice }}</p>
-				</div>
-			</div>
-		{% endif %}
+	<div class="row overview">
+	{% for overview in site.data.info.overview %}
+		<div class="col-12">
+			<p class="text-center">{{ overview }}</p>
+		</div>
 	{% endfor %}
+	</div>
 
-  <div class="post-content" >
+
+	<h3>News</h3>
+	<div class="container-fluid" >
   	<div class="row">
-  		<ul class="post-list">
-  			{% for post in site.posts %}
-  			<li>
-  				<span class="post-meta" style="display:inline">{{ post.date | date: "%b %-d, %Y" }}</span>
-  				<h4 style="display:inline">
-  					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-  				</h4>
-  			</li>
-  			{% endfor %}
-  		</ul>
+			{% for post in site.posts limit:2 %}
+			<div class="news card col-md-12 col-lg-6 p-0 mb-3">
+			  <div class="row no-gutters flex-grow-1">
+			    <div class="col-md-4 pt-2">
+						{% if post.fig %}<a href="{{site.url}}{{ post.url }}">{% if post.fig contains "http" %}<img src="{{post.fig}}"{% else %}<img src="../img/{{post.fig}}"{% endif %} class="card-img"></a>{% endif %}
+			    </div>
+			    <div class="right col-md-8 p-0">
+			      <div class="card-body">
+			        <div class="card-title text-center mt-0 mb-1 mx-1"><h1 class="mt-0"><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h1></div>
+			        <div class="card-text mt-0 mb-1 mx-1">{{ post.excerpt }}</div>
+			        <div class="card-text text-right"><small class="text-muted">{{ post.date | date: "%Y.%m.%d"  }}</small></div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			{% endfor %}
   	</div>
   </div>
 
-	<h3>Recent Publications</h3>
-
-	{% for paper in site.data.publications limit:5 %}
-	<div class="biblio-entry">
-		<div class="authors">
-			{{ paper.AuthorList | replace: "*", "<sup>*</sup>" | replace: "#", "<sup>#</sup>" }}.
-		</div>
-		<div class="title text-capitalize mb-2">
-			{{paper.Title | replace: "2+", "<sup>2+</sup>" | replace: "Na+", "Na<sup>+</sup>" | replace: "K+", "K<sup>+</sup>" | replace: "H+", "H<sup>+</sup>" | replace: "HCO3-", "HCO<sup>3-</sup>"}} {% if paper.DOI %}<a href="https://doi.org/{{paper.DOI}}">{% elsif paper.Id %}<a href="https://www.ncbi.nlm.nih.gov/pubmed/{{paper.Id}}">{% endif %}{{paper.FullJournalName}} {{paper.PubYear}}{% if paper.month contains "ress" %}<i>In Press</i>{% else %}{% if paper.Volume %};{{paper.Volume}}{% endif %}{% if paper.Issue %}({{paper.Issue}}){% endif %}{% if paper.Pages %}:{{paper.Pages}}{% endif %}.{% endif %}{% if paper.DOI or paper.Id %}</a>{% endif %}
-		</div>
+	<h3>Key Publications</h3>
+	<div class="container-fluid" >
+		<ul class="row mx-0">
+		{% for paper in site.data.publications %}
+		{% if paper.Important contains "es" or paper.Important contains "tr" %}
+		<li class="mb-4">
+			<div class="authors">
+				{{ paper.AuthorList | replace: "*", "<sup>*</sup>" | replace: "#", "<sup>#</sup>" }}.
+			</div>
+			<div class="title text-capitalize mb-2">
+				{{paper.Title | replace: "2+", "<sup>2+</sup>" | replace: "Na+", "Na<sup>+</sup>" | replace: "K+", "K<sup>+</sup>" | replace: "H+", "H<sup>+</sup>" | replace: "HCO3-", "HCO<sup>3-</sup>"}} {% if paper.DOI %}<a href="https://doi.org/{{paper.DOI}}">{% elsif paper.Id %}<a href="https://www.ncbi.nlm.nih.gov/pubmed/{{paper.Id}}">{% endif %}{{paper.FullJournalName}} {{paper.PubYear}}{% if paper.month contains "ress" %}<i>In Press</i>{% else %}{% if paper.Volume %};{{paper.Volume}}{% endif %}{% if paper.Issue %}({{paper.Issue}}){% endif %}{% if paper.Pages %}:{{paper.Pages}}{% endif %}.{% endif %}{% if paper.DOI or paper.Id %}</a>{% endif %}
+			</div>
+		</li>
+		{% endif %}
+		{% endfor %}
+		</ul>
 	</div>
-	{% endfor %}
-
-	<span class="oi oi-link-intact"></span><h3>Related Sites</h3>
-  <div class="container">
-    {% for link in site.data.links %}
-    <a href="{{ link.link }}"><button type="button" class="gcButton">{{ link.title }}</button></a>
-    {% endfor %}
-  </div>
-	{{paginator.per_page}}
-
-	{{paginator.total_posts}}
-
-	{{paginator.total_pages}}
-
-
-	<a href="{{paginator.next_page_path}}">{{paginator.next_page_path}}</a>
-
 </div>
