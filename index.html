@@ -20,21 +20,26 @@ layout: default
 
   <div id="carouselIndicators" class="carousel slide shadow mb-3" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselIndicators" data-slide-to="2"></li>
-      <li data-target="#carouselIndicators" data-slide-to="3"></li>
+			{% for fig in site.data.info.mainFig %}
+				{% if forloop.first == true %}
+	      	<li data-target="#carouselIndicators" data-slide-to="{{ forloop.index0 }}" class="active"></li>
+				{% else %}
+	      	<li data-target="#carouselIndicators" data-slide-to="{{ forloop.index0 }}"></li>
+				{% endif %}
+			{% endfor %}
     </ol>
     <div class="carousel-inner shadow">
-      <div class="carousel-item active">
-        <img src="img/frontImg_1.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/frontImg_2.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/frontImg_3.jpg" class="d-block w-100" alt="...">
-      </div>
+			{% for fig in site.data.info.mainFig %}
+				{% if forloop.first == true %}
+		      <div class="carousel-item active">
+		        <img src="img/{{fig}}" class="d-block w-100" alt="...">
+		      </div>
+		    {% else %}
+		      <div class="carousel-item">
+		        <img src="img/{{fig}}" class="d-block w-100" alt="...">
+		      </div>
+		    {% endif %}
+			{% endfor %}
     </div>
     <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -61,7 +66,7 @@ layout: default
 			{% for post in site.posts limit:2 %}
 			<div class="news card col-md-12 col-lg-6 shadow p-0 mb-3">
 			  <div class="row no-gutters flex-grow-1">
-			    <div class="col-md-4 pt-3 ">
+			    <div class="col-md-4 pt-3">
 						{% if post.fig %}<a href="{{site.url}}{{ post.url }}">{% if post.fig contains "http" %}<img src="{{post.fig}}"{% else %}<img src="../img/{{post.fig}}"{% endif %} class="card-img"></a>{% endif %}
 			    </div>
 			    <div class="right col-md-8 p-0">
