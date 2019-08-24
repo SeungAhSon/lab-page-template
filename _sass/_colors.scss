@@ -94,6 +94,20 @@ article {
       background-color: #F0F0F0;
     }
   }
+  #publications {
+    background-color: $text-color; //$background-color;
+    color: white; //$text-color;
+    -webkit-box-shadow: 1px 1px 10px #333;
+    -moz-box-shadow: 1px 1px 10px #333;
+    box-shadow: 1px 1px 10px #333;
+		.authors { color: orange; }
+    .title {
+      a {
+        color: $cornflower;
+        &:hover { color: $cerulean; }
+      }
+    }
+  }
 }
 
 #publications {
@@ -105,15 +119,15 @@ article {
         box-shadow: 1px 1px 10px #333;
 		.year-separator {
 			color: $unmelllow-yellow;
-		}
-		.authors { color: orange; }
-        .title {
-            a {
-                color: $cornflower;
-                &:hover { color: $cerulean; }
-            }
-        }
     }
+		.authors { color: orange; }
+    .title {
+      a {
+        color: $cornflower;
+        &:hover { color: $cerulean; }
+      }
+    }
+  }
 }
 
 /**

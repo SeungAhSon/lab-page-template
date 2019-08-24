@@ -312,6 +312,17 @@
       }
     }
   }
+  #publications {
+    padding: 1em 2em;
+    margin-bottom: 2em;
+		.authors { color: orange; }
+    .title {
+      a {
+        color: $cornflower;
+        &:hover { color: $cerulean; }
+      }
+    }
+  }
 }
 
 #info {
