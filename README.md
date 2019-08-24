@@ -1,7 +1,7 @@
 # GitHub Pages로 Lab Home Page를 만들기 위한 template
 2019.08.23 정지훈
 
-https://GitHub.com 은 버전 관리를 위한 Git 서버지만, 무료 웹호스팅 기능(https://pages.github.com/)이 있고, 이를 이용하여 홈페이지를 운영하는 연구실이 많다.
+https://GitHub.com 은 버전 관리를 위한 Git 서버지만, 무료 웹호스팅 기능(https://pages.github.com/) 이 있고, 이를 이용하여 홈페이지를 운영하는 연구실이 많다.
 * 1분 검색으로 찾은 연구실 홈페이지
   * https://fraser-lab.github.io
   * https://schlosslab.github.io
