@@ -18,8 +18,8 @@
       	padding-left: 0;
         padding-right: 0;
         @media only screen and (max-width: $phone - 1) { padding-left: 1em; padding-right: 1em;}
-        @media only screen and (min-width: $phone) and (max-width: $phone-lg - 1) { max-width: $phone - $grid-gutter-width;}
-        @media only screen and (min-width: $phone-lg) and (max-width: $sm - 1) { max-width: $phone-lg - $grid-gutter-width;}
+        @media only screen and (min-width: $phone) and (max-width: $phone-lg - 1) { padding-left: 1em; padding-right: 1em; }
+        @media only screen and (min-width: $phone-lg) and (max-width: $sm - 1) { max-width: $phone-lg - $grid-gutter-width/2;}
         @media only screen and (min-width: $sm) and (max-width: $md - 1) { max-width: $sm - $grid-gutter-width; }
         @media only screen and (min-width: $md) and (max-width: $lg - 1) { max-width: $md - $grid-gutter-width; }
         @media only screen and (min-width: $lg) and (max-width: $xl - 1) { max-width: $lg - $grid-gutter-width; }

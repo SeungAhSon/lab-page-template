@@ -32,18 +32,18 @@ $sync-scheme:		navbar-default;
 // Width of the content area
 $content-width:    800px;
 
-$sm:               576px;
-$md:               768px;
-$lg:               992px;
-$xl:              1200px;
-
-$on-palm:            $sm;
-$on-laptop:        800px;
-$phone-lg:         480px;
 $phone:         375px;
+$phone-lg:         480px;
+$sm:               576px;
+$on-palm:            $sm;
+$md:               768px;
 $ipad:               $md;
+$on-laptop:        800px;
+$lg:               992px;
 $maxlaptop:          $lg;
+$xl:              1200px;
 $full:               $xl;
+
 
 $breadcrumb-divider: quote(">");
 
