@@ -5,7 +5,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
 
-	<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.labname_short | escape }}</title>
+	<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.short_labname | escape }}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="format-detection" content="telephone=no">
 	{% if site.google-site-verification %}<meta name="google-site-verification" content="OCMXv8hMq12HQX9HLENM1EBGXgoTb6rR6n2SC18RUrw" />{% endif %}
