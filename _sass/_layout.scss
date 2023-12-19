@@ -3,28 +3,44 @@
 ===========================================================*/
 
 #outbox {
-    position: relative; /* child elements are relative to this */
-    min-height: 100%;
-    height: auto !important;
-    width: 100%;
-    padding-top: $header-height + 1px; /* header height. 38px + 1px border -12px for esthetic */
-    padding-right: floor(($grid-gutter-width / 2)); //1em;
-    padding-bottom: 68px - $spacing-unit; /* footer height + pageinfo height */
-    padding-left: floor(($grid-gutter-width / 2)); //1em;
+  position: relative; /* child elements are relative to this */
+  min-height: 100%;
+  height: auto !important;
+  width: 100%;
+  padding-top: $header-height + 10px; /* header height. 38px + 1px border -12px for esthetic */
+  padding-right: floor(calc($grid-gutter-width / 2)); //1em;
+  padding-bottom: 68px - $spacing-unit; /* footer height + pageinfo height */
+  padding-left: floor(calc($grid-gutter-width / 2)); //1em;
+  margin: auto;
+  &.container {
+    margin-bottom: $spacing-unit;
     margin: auto;
-    &.container {
-      	margin-bottom: $spacing-unit;
-        margin: auto;
-      	padding-left: 0;
-        padding-right: 0;
-        @media only screen and (max-width: $phone - 1) { padding-left: 1em; padding-right: 1em;}
-        @media only screen and (min-width: $phone) and (max-width: $phone-lg - 1) { padding-left: 1em; padding-right: 1em; }
-        @media only screen and (min-width: $phone-lg) and (max-width: $sm - 1) { max-width: $phone-lg - $grid-gutter-width/2;}
-        @media only screen and (min-width: $sm) and (max-width: $md - 1) { max-width: $sm - $grid-gutter-width; }
-        @media only screen and (min-width: $md) and (max-width: $lg - 1) { max-width: $md - $grid-gutter-width; }
-        @media only screen and (min-width: $lg) and (max-width: $xl - 1) { max-width: $lg - $grid-gutter-width; }
-        @media only screen and (min-width: $xl) { width: $xl - $grid-gutter-width; }
-      }
+    padding-left: 0;
+    padding-right: 0;
+    @media only screen and (max-width: $phone - 1) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    @media only screen and (min-width: $phone) and (max-width: $phone-lg - 1) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    @media only screen and (min-width: $phone-lg) and (max-width: $sm - 1) {
+      max-width: $phone-lg - calc($grid-gutter-width / 2);
+    }
+    @media only screen and (min-width: $sm) and (max-width: $md - 1) {
+      max-width: $sm - $grid-gutter-width;
+    }
+    @media only screen and (min-width: $md) and (max-width: $lg - 1) {
+      max-width: $md - $grid-gutter-width;
+    }
+    @media only screen and (min-width: $lg) and (max-width: $xl - 1) {
+      max-width: $lg - $grid-gutter-width;
+    }
+    @media only screen and (min-width: $xl) {
+      width: $xl - $grid-gutter-width;
+    }
+  }
 }
 
 /*=========================================================
@@ -32,142 +48,180 @@
 ===========================================================*/
 
 #pagebox {
-    padding-top: 0px;
-	header {
-		margin: 1em 0;
-		border-bottom: 1px solid #eeeeee;
-		h1 {
-			line-height: 1em;
-		}
-	}
-	.row {
-		line-height: 1.3em;
-	}
+  padding-top: 0px;
+  header {
+    margin: 0;
+
+    h1 {
+      font-size: 0.8em;
+      line-height: 1em;
+    }
+  }
+  .row {
+    line-height: 1.3em;
+  }
 }
 
 #sidebar {
-    padding-top: 40px;
-    padding-right: $spacing-unit; //30px;
-    padding-bottom: 20px;
-    padding-left: 0px;
-	ul {
-		margin-left: 1em;
-		padding: 0 0.4em;
-		line-height: 1em;
-        overflow-y: hidden;
-		li {
-			padding: 0.4em 0;
-			font-weight: $base-font-weight - 100;
-			    &:hover {
-					font-weight: $base-font-weight;
-				}
-		}
-	}
+  padding-top: 40px;
+  padding-right: $spacing-unit; //30px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+  ul {
+    margin-left: 1em;
+    padding: 0 0.4em;
+    line-height: 1em;
+    overflow-y: hidden;
+    li {
+      padding: 0.4em 0;
+      font-weight: $base-font-weight - 100;
+      &:hover {
+        font-weight: $base-font-weight;
+      }
+    }
+  }
 }
 
 #notice {
-    .jumbotron {
-        padding-top: 1em;
-        padding-bottom: 1em;
-        margin-bottom: 0.5em;
-        p {
-            font-family: 'Architects Daughter', 'Jeju Hallasan', 'Noto Sans KR', sans-serif ;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 1.5em;
-            margin-bottom: 1em;
-        }
-        a {text-decoration: none;}
+  .jumbotron {
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+
+    h1 {
+      /*font-family: "Architects Daughter", "Jeju Hallasan", "Noto Sans KR",
+        sans-serif;*/
+      font-weight: normal;
+      font-style: normal;
+      font-size: 1.5em;
+
+      // Set white-space to pre-line
+      white-space: pre-line;
     }
+
+    p {
+      /*font-family: "Architects Daughter", "Jeju Hallasan", "Noto Sans KR",
+        sans-serif;*/
+      font-weight: normal;
+      font-style: normal;
+      font-size: 1.1em;
+      margin-bottom: 1em;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 #research {
-  .card-img { max-width: 375px;   display: block;  margin: 0 auto; }
+  .card-img {
+    max-width: 375px;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-#project {
-  .card-header { min-height: 5em; }
-  .card-img-top { max-width: 375px;   display: block;  margin: 0 auto 1em; }
-}
+#news {
+  .card-header {
+    min-height: 5em;
+  }
+  .card-img-top {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 1em;
+  }
+  .card-link {
+    color: inherit; /* Use the default text color */
+    text-decoration: none; /* Remove underlines */
+  }
 
-#project, #news {
-  .card-header { min-height: 5em; }
-  .card-img-top { max-width: 550px;   display: block;  margin: 0 auto 1em; }
+  .card-link:hover {
+    color: inherit; /* Use the default text color on hover */
+    text-decoration: none; /* Remove underlines on hover */
+  }
 }
 
 #content {
-	padding: 0 0 1em 0;
-	h1 { margin-top: 1em; margin-bottom: 0.5em; }
-	p {
-		margin-top: 1em;
-		margin-bottom: 0.3em;
-	}
-    li {
-    	margin-top: 0px;
-    	margin-bottom: 0.3em;
-   		padding: 0;
-		font-weight: $base-font-weight - 100;
-		p { margin-top: 0px; }
+  padding: 0 0 1em 0;
+  h1 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  p {
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+  }
+  li {
+    margin-top: 0px;
+    margin-bottom: 0.3em;
+    padding: 0;
+    font-weight: $base-font-weight - 100;
+    p {
+      margin-top: 0px;
     }
-    li li {
-    	margin-top: 0px;
-    	margin-bottom: 0.3em;
-   		padding: 0;
-		font-weight: $base-font-weight - 200;
-    }
+  }
+  li li {
+    margin-top: 0px;
+    margin-bottom: 0.3em;
+    padding: 0;
+    font-weight: $base-font-weight - 200;
+  }
 }
 
 #pageinfo-container {
-    position: absolute;
-    text-align: right;
-    vertical-align: bottom;
-    width: 100%;
-    max-height: 28px;
-    padding: 0px 0px;
-    margin-top: -68px; /* #footer + #pageinfo-container */
-    font-size: .85em;
-    display: block;
-    overflow: visible;
-    word-wrap: break-word;
+  position: absolute;
+  text-align: right;
+  vertical-align: bottom;
+  width: 100%;
+  max-height: 28px;
+  padding: 0px 0px;
+  margin-top: -68px; /* #footer + #pageinfo-container */
+  font-size: 0.85em;
+  display: block;
+  overflow: visible;
+  word-wrap: break-word;
 }
-
 
 /**
  * Site header
  */
 .site-header {
-    min-height: 56px;
-    // Positioning context for the mobile navigation icon
-    position: relative;
+  min-height: 56px;
+  // Positioning context for the mobile navigation icon
+  position: relative;
 }
 
 .site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+  float: right;
+  line-height: 56px;
 
-    .menu-icon {
-        display: none;
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
     }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-/*
+  }
+  /*
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
@@ -219,202 +273,381 @@
 */
 }
 
-
 /**
  * Site footer
  */
 /* sticky footer; sticks to the bottom of the screen as long as contents are less than 1 screen long */
 #footer {
-    position: relative;
-	display: block;
-    width: 100%;
-    min-height: $header-height+2; /* fixed (maximum) height. $navbar-height = 38px */
-	border-top: 1px solid #E5E5E5;
-	margin: -1 * ($header-height+2 +1 ) auto 0; // max-height + border = -41px;
-	padding: 10px 0px;
-    background-color: #f5f5f5;
-    font-size: $base-font-size * 0.85 ;
-    text-align: center;
-    line-height: 20px;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: $header-height + 2; /* fixed (maximum) height. $navbar-height = 38px */
+  border-top: 1px solid #e5e5e5;
+  margin: -1 * ($header-height + 2 +1) auto 0; // max-height + border = -41px;
+  padding: 10px 0px;
+  background-color: #f5f5f5;
+  font-size: $base-font-size * 0.85;
+  text-align: center;
+  line-height: 20px;
 }
-
 
 /**
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+  padding: $spacing-unit 0;
 }
 
 .page-heading {
-    font-size: 20px;
+  font-size: 20px;
 }
-
 
 /**
  * Posts (sync)
  */
 
-.post-header {  font-family: 'Ruda', sans-serif, 'Noto Sans KR'; }
+.post-header {
+  font-family: "Ruda", sans-serif, "Noto Sans KR";
+}
 
 .post-list {
-    margin-left: 0;
-    list-style: none;
+  margin-left: 0;
+  list-style: none;
 
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+  > li {
+    margin-bottom: $spacing-unit;
+  }
 }
 
 .post-meta {
-    font-size: $small-font-size;
+  font-size: $small-font-size;
 }
 
 .post-link {
-    display: block;
-    font-size: 24px;
+  display: block;
+  font-size: 24px;
 }
 
-
 .no-padding {
-    padding: 0;
+  padding: 0;
 }
 
 .post-content {
-  .img-top {max-width: 600px; display: block;  margin: 0 auto 1em; }
-
+  .img-top {
+    max-width: 600px;
+    display: block;
+    margin: 0 auto 1em;
+  }
 }
 
 #home {
-	h1 { margin-top: 0.7em; line-height: 1.2em;}
-  .col-xs-4 {
-      img {
-          max-height:300px;
-          margin: auto;
-          display: block;
-      }
-      @media screen and (max-width: 480px) {
-          padding-right: 5px;
-          padding-left: 5px;
-      }
+  h1 {
+    margin-top: 0.7em;
+    line-height: 1.2em;
   }
-  .overview {
-    font-size: 1.1em;
+  .col-xs-4 {
+    img {
+      max-height: 300px;
+      margin: auto;
+      display: block;
+    }
+    @media screen and (max-width: 480px) {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
   }
   .news {
-    .card-img { max-width: 450px;   display: block;  margin: 0 auto 1em; }
+    .card-img {
+      max-width: 300px;
+      display: block;
+      margin: 0 auto 1em;
+    }
     .right {
       height: 100%;
       font-size: 1em;
-      background-color: #F0F0F0;
+      background-color: #f0f0f0;
       .card-text {
-        h1 { font-size: 1.2em;}
+        h1 {
+          font-size: 1.2em;
+        }
       }
     }
   }
   #publications {
     padding: 1em 2em;
     margin-bottom: 2em;
-		.authors { color: orange; }
+    .authors {
+      color: orange;
+    }
     .title {
       a {
         color: $cornflower;
-        &:hover { color: $cerulean; }
+        &:hover {
+          color: $cerulean;
+        }
       }
     }
   }
 }
 
 #info {
-    #map {
-        width: 100%;
-        height: 350px;
-        @media screen and (max-width: 640px) and (orientation: landscape) { height: 180px; }
+  #map {
+    width: 100%;
+    height: 350px;
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+      height: 180px;
     }
+  }
 }
 
 .members {
-    @media screen and (max-width: 767px) { margin-right: 1em; margin-left: 1em; }
-    @media screen and (max-width: 480px) { margin-right: 0em; margin-left: 0em; }
-    @media screen and (max-width: 364px) { margin-right: -0.5em; margin-left: -0.5em; }
-    .row {
-        position: relative;
-        padding-top: 1em;
-        padding-bottom: 1em;
+  @media screen and (max-width: 767px) {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  @media screen and (max-width: 480px) {
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+  @media screen and (max-width: 364px) {
+    margin-right: -0.5em;
+    margin-left: -0.5em;
+  }
+  .row {
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
 
-        min-width: 320px;
-        min-height: 9.1em;
-        height: 100%;
-        &:last-child {padding-bottom: 0em; }
-        @media screen and (min-width:768px) {
-            margin-right: -0.5em;
-            margin-left: -0.5em;
+    min-width: 320px;
+    min-height: 9.1em;
+    height: 100%;
+    &:last-child {
+      padding-bottom: 0em;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: -0.5em;
+      margin-left: -0.5em;
+    }
+    .card {
+      height: 12em;
+      border: none;
+      .person {
+        margin: 0em;
+        padding: 0em;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        .portrait {
+          position: absolute;
+          left: 0;
+          width: 8em;
+          .card-img {
+            display: block;
+            border-radius: 0px;
+            height: 12em;
+            width: 8em;
+            overflow: hidden;
+            margin: none;
+
+            object-fit: cover;
+          }
         }
-        .card {
-          height: 9.2em;
-          .person {
-            margin: 0em;
-            padding: 0em;
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-            .portrait {
-              position: absolute;
-              left: 0;
-              width: 9.1em;
-              .card-img {
-                display: block;
-                border-radius: 6px;
-                height: 8.5em;
-                width: auto;
-                margin: 0.3em auto;
-              }
+        .card-body {
+          margin-left: 9.1em;
+          height: 9.1em;
+          padding: none;
+          background-color: white;
+          .card-title {
+            margin: 0;
+            padding: 0;
+            h4 {
+              margin-top: 0;
+              line-height: calc($base-line-height * 2 / 3);
             }
-            .card-body {
-              margin-left: 9.1em;
-              height: 9.1em;
-              padding: .3em;
-              background-color: #F3F3F3;
-              .card-title {
-                  margin: 0;
-                  padding: 0;
-                  h4 {
-                      margin-top: 0;
-                      line-height: $base-line-height * 2 / 3;
-                  }
-                  @media screen and (max-width:375px) { font-size: 0.9em; }
-              }
-              .card-text {
-                  //position: absolute;
-                  margin-right: 0.3em;
-                  overflow: hidden;
-                  bottom: 0.3em;
-                  margin-bottom: 2em;
-                  @media screen and (max-width:768px) { font-size: 0.9em; }
-                  @media screen and (max-width:553px) { font-size: 0.9em; }
-                  @media screen and (max-width:375px) { font-size: 0.9em; }
-                  @media screen and (max-width:320px) { font-size: 0.8em; }
-              }
-              .jobtitle {
-                  position: absolute;
-                  margin-right: 0.3em;
-                  overflow: hidden;
-                  bottom: 0.3em;
-                  margin-bottom: 0em;
-                  @media screen and (max-width:768px) { font-size: 0.9em; }
-                  @media screen and (max-width:553px) { font-size: 0.9em; }
-                  @media screen and (max-width:375px) { font-size: 0.9em; }
-                  @media screen and (max-width:320px) { font-size: 0.8em; }
-              }
+            @media screen and (max-width: 375px) {
+              font-size: 0.9em;
+            }
+          }
+          .card-text {
+            //position: absolute;
+            margin-right: 0.3em;
+            overflow: hidden;
+            bottom: 0.3em;
+            margin-bottom: 2em;
+            @media screen and (max-width: 768px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 553px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 375px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 320px) {
+              font-size: 0.8em;
+            }
+          }
+          .jobtitle {
+            position: absolute;
+            margin-right: 0.3em;
+            overflow: hidden;
+            bottom: 0.3em;
+            margin-bottom: 0em;
+            @media screen and (max-width: 768px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 553px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 375px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 320px) {
+              font-size: 0.8em;
             }
           }
         }
-        .spacer {
-            @media screen and (min-width: 768px) { height: 9.2em; margin-bottom: 1em;}
-            height: 0; margin: 0; padding: 0;
-        }
+      }
     }
-/*    a {
+    .spacer {
+      @media screen and (min-width: 768px) {
+        height: 9.2em;
+        margin-bottom: 1em;
+      }
+      height: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  /*    a {
+        &:before {
+            content: "target='_blank'";
+        }
+    }*/
+}
+
+.prof {
+  @media screen and (max-width: 767px) {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  @media screen and (max-width: 480px) {
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+  @media screen and (max-width: 364px) {
+    margin-right: -0.5em;
+    margin-left: -0.5em;
+  }
+  .row {
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    min-width: 320px;
+    min-height: 9.1em;
+    width: 100%;
+    height: 100%;
+    &:last-child {
+      padding-bottom: 0em;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: -0.5em;
+      margin-left: -0.5em;
+    }
+    .card {
+      height: 100%;
+      border: none;
+      .person {
+        margin: 0em;
+        padding: 0em;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        .portrait {
+          position: absolute;
+          left: 0;
+          width: 8em;
+          .card-img {
+            display: block;
+            border-radius: 0px;
+            height: 12em;
+            width: 8em;
+            overflow: hidden;
+            margin: none;
+
+            object-fit: cover;
+          }
+        }
+        .card-body {
+          margin-left: 9.1em;
+          height: 15em;
+          width: 100%;
+          padding: none;
+          background-color: white;
+          .card-title {
+            margin: 0;
+            padding: 0;
+            h4 {
+              margin-top: 0;
+              line-height: calc($base-line-height * 2 / 3);
+            }
+            @media screen and (max-width: 375px) {
+              font-size: 0.9em;
+            }
+          }
+          .card-text {
+            //position: absolute;
+            margin-right: 0.3em;
+            overflow: hidden;
+            bottom: 0.3em;
+            margin-bottom: 2em;
+            @media screen and (max-width: 768px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 553px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 375px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 320px) {
+              font-size: 0.8em;
+            }
+          }
+          .jobtitle {
+            position: absolute;
+            margin-right: 0.3em;
+            overflow: hidden;
+            bottom: 0.3em;
+            margin-bottom: 0em;
+            @media screen and (max-width: 768px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 553px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 375px) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: 320px) {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+    .spacer {
+      @media screen and (min-width: 768px) {
+        height: 9.2em;
+        margin-bottom: 1em;
+      }
+      height: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  /*    a {
         &:before {
             content: "target='_blank'";
         }
@@ -422,37 +655,37 @@
 }
 
 #publications {
-	.row {
-	  margin-left: 0px;
-	  margin-right: 0px;
-	}
-	.annual {
-		font-family: 'Noto Sans KR', sans-serif;
-		font-size: 1em;
-		font-weight: 400;
-		letter-spacing: normal;
-		line-height: 1.5em;
-		margin: 2em 0;
-		padding: 2em 2em;
-		.year-separator {
-			margin: 1em 0 1em 0;
-			border: 0;
-			font-weight: bold;
-			font-size: 1.2em;
-		}
-		.authors {
-			&:before {
-				content: "• ";
-			}
-		}
-		.title {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .annual {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.5em;
+    margin: 2em 0;
+    padding: 2em 2em;
+    .year-separator {
+      margin: 1em 0 1em 0;
+      border: 0;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .authors {
+      &:before {
+        content: "• ";
+      }
+    }
+    .title {
       padding-left: 0.5em;
-		}
+    }
     @media screen and (max-width: 767px) {
       margin: 0em -0.5em 2em;
       padding: 1.5em 1em;
     }
-	}
+  }
 }
 
 /*=========================================================
@@ -460,26 +693,27 @@
 ===========================================================*/
 
 @media print {
-    #sidebar,
-    #sidebar-curtain,
-    #sidebar-mover,
-    .offcanvas-trigger,
-    .alert,
-    #footer,
-    #pageinfo-container,
-    #location {
-        display: none;
-    }
-    #outbox,
-    #pagebox,
-    #contentbox {
-        width: 100%;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        display: block; /* to fix Firefox print preview */
-    }
-    a[href]:after { /* to stop printing anchor destinations in print mode */
-        content: "";
-    }
+  #sidebar,
+  #sidebar-curtain,
+  #sidebar-mover,
+  .offcanvas-trigger,
+  .alert,
+  #footer,
+  #pageinfo-container,
+  #location {
+    display: none;
+  }
+  #outbox,
+  #pagebox,
+  #contentbox {
+    width: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    display: block; /* to fix Firefox print preview */
+  }
+  a[href]:after {
+    /* to stop printing anchor destinations in print mode */
+    content: "";
+  }
 }

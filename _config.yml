@@ -6,20 +6,21 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 계산신경과학연구실
-short_labname: ChungLab
+title: Vehicular Intelligence Lab
+short_labname: VIL
 email: physi5logy@gmail.com
 logo: logo.png
+logo2: logo2.png
 description: > # 다음 줄에 연구실 소개 입력
-  ChungLab of Computational Neuroscience, Seoul National University; 서울대학교 치과대학 정지훈 교수 감각신경 연구실; Gehoon Chung;
+  VILlab of CCS School of Mobility, Korea Advanced Institute of Science and Technology; KAIST 조천식모빌리티대학원 하동수 교수 연구실; Dongsoo Har;
 baseurl: "" # the subpath of your site, e.g. /blog
-github_username:  ChungLab
+github_username: VIL
 google-site-verification:
 
 # Build settings
 markdown: kramdown
-include: ['_pages', '_news']
-plugins: [jekyll-seo-tag,jekyll-paginate]
+include: ["_pages", "_news"]
+plugins: [jekyll-seo-tag, jekyll-paginate]
 
 paginate: 5
 paginate_path: "/news/page:num/"

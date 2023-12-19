@@ -1,73 +1,71 @@
 PI:
-- name: 나교수
-  engName: Gehoon Chung
-  degree: DDS, PhD
-  bio: Electrophysiology, Computational Biology
-  jobtitle: Associate Professor
-  portrait: anonymous.jpg
-  e-mail: gehoon@snu.ac.kr
-  web: https://wiki.snu.ac.kr/GehoonChung
-  scopus: 7102049033
-  orcid: 0000-0002-8036-0879
-  researcherID: C-5714-2008
-  loop: 406457
-  linked: gehoon
-  fb: byeongmin.lee.9
-  twitter: gehoon
-  instagram: gehoon
+  - name: 하동수
+    engName: Dongsoo Har
+    degree:
+    phone: +82-42-350-1267
+    Education:
+    bio: |
+      Polytechnic University at Brooklyn, U.S.A.(Ph.D., Electrical Engineering)
+      Seoul National University, Korea (M.S., Electronics Engineering)
+      Seoul National University, Korea (B.S., Electronics Engineering)
+    Work: |
+      2017.1 - IEEE Sensor Journal Associate Editor
+      2013.1 - present Associate Professor, KAIST
+      2003.3 - 2012.12 Associate Professor, GIST
+      2000.8 - 2001.8 Senior Engineer, Romeo System, USA
+      1997.5 - 2000.7 Senior RF engineer, Vodafone, USA
+    Research: |
+      Multimedia Communication System Design and Implementation in ITS
+      Communication System/Network for Autonomous Vehicles
+      Wireless Sensor Network Design and Implementation for ITS
+      High-efficiency digital system design for power grid
+    Honors_and_Awards:
+      Honors: |
+        Minister Commendation (2016)
+        Ministry of Land, Infrastructure, and Transport
+      Awards: |
+        IEEE Transactions on Vehicular Technology (2000)
+        ENICS International Conference (2008)
+        IEEE APWCE International Conference (2016)
+    period:
+    jobtitle: Professor
+    portrait: ../img/ppl/vil.gif
+    e-mail: dshar@kaist.ac.kr
 
 Members:
-- name: 전학생
-  engName: Byeong-Min Lee
-  degree: DDS, BS
-  bio: Calcium Imaging, Alchemy
-  period: 2015/3-
-  jobtitle: DDS/PhD Student
-  portrait:
-  e-mail: bmjj88@snu.ac.kr
-  web:
-  scopus:
-  orcid:
-  researcherID:
-  loop:
-  linked:
-  fb: byeongmin.lee.9
-  twitter:
-  instagram:
+  - name: 최영미
+    engName: YoungMi Choi
+    degree:
+    bio:
+    period:
+    jobtitle: Staff
+    portrait: ../img/ppl/howifegod.gif
+    e-mail: howifegod@kaist.ac.kr
 
-- name: 다른학생
-  engName: Next Student
-  degree: MS
-  bio: Electrophysiology, Molecular Biology
-  period: 2019/3-
-  jobtitle: PhD Student
-  portrait:
-  e-mail: donot@mail.com
-  web:
-  scopus:
-  orcid:
-  researcherID:
-  loop:
-  linked:
-  fb: byeongmin.lee.9
-  twitter:
-  instagram:
+  - name: 진주희
+    engName: JuHee Jin
+    degree:
+    bio:
+    period:
+    jobtitle: Researcher
+    portrait: ../img/ppl/worth85.gif
+    e-mail: worth85@kaist.ac.kr
+
+  - name: 진호준
+    engName: Hojun Jin
+    degree:
+    bio:
+    period:
+    jobtitle: Post Doc
+    portrait: ../img/ppl/horang1976.gif
+    e-mail: hjjin1995@kaist.ac.kr
 
 Past:
-- name: 권민수
-  engName: Minsoo Kwon
-  degree: DDS, BS
-  period: 2011/9-2013/1
-  bio: Kyung Hee University Dental Hospital
-  jobtitle: Resident
-  portrait: 
-  e-mail: donot@mail.com
-  web:
-  scopus:
-  orcid:
-  researcherID:
-  loop:
-  linked: minsoo-kwon-1b609393
-  fb: byeongmin.lee.9
-  twitter:
-  instagram:
+  - name: 이상금
+    engName: SangKeum Lee
+    degree: Ph D.
+    period: 2011/9-2013/1
+    bio:
+    jobtitle: 한밭대학교 교수
+    portrait: ../img/ppl/sd974201.gif
+    e-mail: sd974201@kaist.ac.kr

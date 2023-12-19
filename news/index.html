@@ -4,24 +4,41 @@ title: Lab News
 menu: news
 ---
 
+<hr />
+
+<header class="post-header">
+  <h1 class="post-title">
+    <i class="fa fa-home" aria-hidden="true"></i> > News
+  </h1>
+</header>
 <div id="news" class="container-fluid pt-4">
   <!-- This loops through the paginated posts -->
-  {% for post in paginator.posts %}
-    <div class="card shadow mb-5">
-      <div class="card-header">
-        <h1 class="mb-0"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-          <p class="author ml-2 mt-0 mb-0">
-            <span class="date">{{ post.date | date: "%Y.%m.%d"  }}</span>
-          </p>
+  <div class="row">
+    {% for post in paginator.posts %}
+      <div class="card-group col-md-6 col-lg-6 col-xl-4">
+        <a href="{{ post.link }}" class="card m-2 shadow card-link">
+          <!-- Card content goes here -->
+          <div class="card-header">
+            <h3 class="mb-0">{{ post.title }}</h3>
+            <p class="author ml-2 mt-0 mb-0">
+              <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span>
+            </p>
+          </div>
+          <div class="card-body">
+            {% if post.fig %}
+              {% if post.fig contains "http" %}
+                <img src="{{ post.fig }}" class="card-img-top" />
+              {% else %}
+                <img src="../img/{{ post.fig }}" class="card-img-top" />
+              {% endif %}
+            {% endif %}
+            <h5 class="card-title">{{ post.subtitle }}</h5>
+            <p class="card-text text-justify">{{ post.content }}</p>
+          </div>
+        </a>
       </div>
-      <div class="card-body">
-        {% if post.fig %}{% if post.fig contains "http" %}<img src="{{post.fig}}"{% else %}<img src="../img/{{post.fig}}"{% endif %} class="card-img-top">{% endif %}
-        <h3 class="card-title">{{ post.subtitle }}</h3>
-        <p class="card-text text-justify">{{ post.content }}</p>
-        {% if post.link %}<a href="{{ post.link }}" class="btn btn-info">more</a>{% endif %}
-      </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
 
 <!-- Pagination links -->
@@ -29,35 +46,54 @@ menu: news
 <nav id="pagination">
   <ul class="pagination justify-content-center">
     {% if paginator.previous_page %}
-      <li class="page-item">
-        <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Newer</a>
-      </li>
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="{{ paginator.previous_page_path | relative_url }}"
+        >&laquo; Newer</a
+      >
+    </li>
     {% else %}
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">&laquo; Newer</a>
-      </li>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <li class="page-item active">
-          <a class="page-link" href="#">{{ page }}<span class="sr-only">(current)</span></a>
-        </li>
-      {% elsif page == 1 %}
-        <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" class="btn btn-primary" role="button">{{ page }}</a></li>
-      {% else %}
-        <li class="page-item"><a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a></li>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <li class="page-item">
-        <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">Older &raquo;</a>
-      </li>
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">&laquo; Newer</a>
+    </li>
+    {% endif %} {% for page in (1..paginator.total_pages) %} {% if page ==
+    paginator.page %}
+    <li class="page-item active">
+      <a class="page-link" href="#"
+        >{{ page }}<span class="sr-only">(current)</span></a
+      >
+    </li>
+    {% elsif page == 1 %}
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="{{ paginator.previous_page_path | relative_url }}"
+        class="btn btn-primary"
+        role="button"
+        >{{ page }}</a
+      >
+    </li>
     {% else %}
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">Older &raquo;</a>
-      </li>
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="{{ site.paginate_path | relative_url | replace: ':num', page }}"
+        >{{ page }}</a
+      >
+    </li>
+    {% endif %} {% endfor %} {% if paginator.next_page %}
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="{{ paginator.previous_page_path | relative_url }}"
+        >Older &raquo;</a
+      >
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Older &raquo;</a>
+    </li>
     {% endif %}
   </ul>
 </nav>

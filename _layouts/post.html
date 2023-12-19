@@ -1,36 +1,67 @@
 ---
 layout: default
 ---
-<article class="post container-fluid" itemscope itemtype="http://schema.org/BlogPosting">
 
+<article
+  class="post container-fluid"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta">
+      <time
+        datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished"
+        >{{ page.date | date: "%b %-d, %Y" }}</time
+      >{% if page.author %} •
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person"
+        ><span itemprop="name">{{ page.author }}</span></span
+      >{% endif %}
+    </p>
   </header>
 
   <div class="post-content text-justify" itemprop="articleBody">
-    {% if page.fig %}{% if page.fig contains "http" %}<img src="{{page.fig}}"{% else %}<img src="{{ site.url }}/img/{{page.fig}}"{% endif %} class="img-top">{% endif %}
-    {{ content }}
+    {% if page.fig %}{% if page.fig contains "http" %}<img
+      src="{{page.fig}}"
+      {%
+      else
+      %}<img
+      src="{{ site.url }}/img/{{page.fig}}"
+      {%
+      endif
+      %}
+      class="img-top"
+    />{% endif %} {{ content }}
   </div>
-
 </article>
 
-<div id="news" class="container-fluid pt-4">
+<div id="news" class="container-fluid pt-4" style="width: 50px">
   <!-- This loops through the paginated posts -->
   {% for post in paginator.posts %}
-    <div class="card shadow mb-5">
-      <div class="card-header">
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <p class="author">
-          <span class="date">{{ post.date }}</span>
-        </p>
-      </div>
-      <div class="card-body">
-        {% if post.fig %}{% if post.fig contains "http" %}<img src="{{post.fig}}"{% else %}<img src="../img/{{post.fig}}"{% endif %} class="card-img-top">{% endif %}
-        <h3 class="card-title">{{ post.subtitle }}</h3>
-        <p class="card-text text-justify">{{ post.content }}</p>
-        {% if post.link %}<a href="{{ post.link }}" class="btn btn-info">more</a>{% endif %}
-      </div>
+  <div class="card shadow mb-5">
+    <div class="card-header">
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <p class="author">
+        <span class="date">{{ post.date }}</span>
+      </p>
     </div>
+    <div class="card-body">
+      {% if post.fig %}{% if post.fig contains "http" %}<img
+        src="{{post.fig}}"
+        {%
+        else
+        %}<img
+        src="../img/{{post.fig}}"
+        {%
+        endif
+        %}
+        class="card-img-top"
+      />{% endif %}
+      <p class="card-text text-justify">{{ post.content }}</p>
+      {% if post.link %}<a href="{{ post.link }}" class="btn btn-info">more</a
+      >{% endif %}
+    </div>
+  </div>
   {% endfor %}
 </div>
