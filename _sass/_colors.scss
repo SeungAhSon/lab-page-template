@@ -2,73 +2,84 @@
  * Links
  */
 a {
-    color: $brand-color;
-    text-decoration: none;
-	background-color: transparent;
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
 
 	&:active,
     &:visited { color: darken($brand-color, 15%); }
 
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-        outline: 0;
-    }
-    //.backlink {color: $scarlet}
+  &:hover {
+    color: $text-color;
+    outline: 0;
+  }
+  //.backlink {color: $scarlet}
 }
 
 #notice {
-    .jumbotron {
-        h1 { color: whitesmoke; }
-        color: $Behr17-01;
-        background-color: $Behr17-17;
-        a { color: $cornflower;
-            &:hover { color: $jungle-green;}
-        }
+  outline: 2px solid #194683;
+  border-radius: 8px;
+  .jumbotron {
+    color: black;
+    background-color: white;
+
+    a {
+      color: black;
+      &:hover {
+        color: $jungle-green;
+      }
     }
+  }
 }
 
 #content {
-	a:current {color: #194683;}
-	a.nonexistent:visited,
-	a.nonexistent,
-	a.badinterwiki:visited,
-	a.badinterwiki {
-		color: #999;
-	}
+  a:current {
+    color: #194683;
+  }
+  a.nonexistent:visited,
+  a.nonexistent,
+  a.badinterwiki:visited,
+  a.badinterwiki {
+    color: #999;
+  }
 }
 
 #news {
-  .btn-info { color: white; }
+  .btn-info {
+    color: white;
+  }
 }
 
 article {
-    header {
-        h1 {
-            //border-radius: 6px;
-            //color: $periwinkle; background-color: $cerulean;
-            text-shadow: 1px 1px 1px rgba(125,125,125,.5);
-            //min-width: none; width: none;
-            //padding: 5px;
-        }
+  header {
+    h1 {
+      //border-radius: 6px;
+      //color: $periwinkle; background-color: $cerulean;
+      text-shadow: none; //1px 1px 1px rgba(125, 125, 125, 0.5);
+      //min-width: none; width: none;
+      //padding: 5px;
     }
+  }
 }
 
 .members {
-	background-color: $Grey50;
+  background-color: white;
   .card {
     .person {
-      box-shadow: 0 2px 10px rgba(25, 25, 25, $alpha);
-      -webkit-box-shadow: 0 2px 10px rgba(25, 25, 25, $alpha);
-      -moz-box-shadow: 0 2px 10px rgba(25, 25, 25, $alpha);
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
       border-collapse: separate;
-      .portrait { background-color: white;}
+      .portrait {
+        background-color: white;
+      }
       .card-body {
-        background-color: #F3F3F3;
+        background-color: #f3f3f3;
         .jobtitle {
           code {
-            color: $periwinkle; background-color: $cerulean;
-            text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+            color: white;
+            background-color: $cerulean;
+            text-shadow: none;
           }
         }
       }
@@ -77,116 +88,137 @@ article {
 }
 
 .shadow-dark {
-    border:0;
-    -webkit-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
-    -moz-box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
-    box-shadow: 0 6px 10px rgba(125, 125, 125,$alpha);
+  border: 0;
+  -webkit-box-shadow: 0 6px 10px rgba(125, 125, 125, $alpha);
+  -moz-box-shadow: 0 6px 10px rgba(125, 125, 125, $alpha);
+  box-shadow: 0 6px 10px rgba(125, 125, 125, $alpha);
 }
 
 .post-meta {
-    color: $grey;
+  color: $grey;
 }
 
 #home {
-  h1 { text-shadow: 1px 1px 1px rgba(125,125,125,.5); }
+  h1 {
+    text-shadow: none; //1px 1px 1px rgba(125, 125, 125, 0.5);
+  }
   .news {
     .right {
-      background-color: #F0F0F0;
+      background-color: #f0f0f0;
     }
   }
   #publications {
-    background-color: $text-color; //$background-color;
-    color: white; //$text-color;
-    -webkit-box-shadow: 1px 1px 10px #333;
-    -moz-box-shadow: 1px 1px 10px #333;
-    box-shadow: 1px 1px 10px #333;
-		.authors { color: orange; }
+    background-color: #f0f0f0;
+    color: black; //$text-color;
+    -webkit-box-shadow: 1px 1px 10px white;
+    -moz-box-shadow: 1px 1px 10px white;
+    box-shadow: 1px 1px 10px white;
+    .authors {
+      color: #333;
+    }
     .title {
       a {
         color: $cornflower;
-        &:hover { color: $cerulean; }
+        &:hover {
+          color: $cerulean;
+        }
       }
     }
   }
 }
 
 #publications {
-	.annual {
-		background-color: $text-color; //$background-color;
-		color: white; //$text-color;
-        -webkit-box-shadow: 1px 1px 10px #333;
-        -moz-box-shadow: 1px 1px 10px #333;
-        box-shadow: 1px 1px 10px #333;
-		.year-separator {
-			color: $unmelllow-yellow;
+  .annual {
+    background-color: $text-color; //$background-color;
+    color: white; //$text-color;
+    -webkit-box-shadow: 1px 1px 10px #333;
+    -moz-box-shadow: 1px 1px 10px #333;
+    box-shadow: 1px 1px 10px #333;
+    .year-separator {
+      color: $unmelllow-yellow;
     }
-		.authors { color: orange; }
+    .authors {
+      color: orange;
+    }
     .title {
       a {
         color: $cornflower;
-        &:hover { color: $cerulean; }
+        &:hover {
+          color: $cerulean;
+        }
       }
     }
   }
+}
+
+.text-section {
+  background-color: rgba(25, 70, 131, 0.9); /* Transparent blue background */
+  color: #fff; /* White text */
+  padding: 5em;
+  margin: 0;
+}
+.img-section {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-dark;
-    border-bottom: 1px solid $grey-light;
+  border-top: 5px solid $grey-dark;
+  border-bottom: 1px solid $grey-light;
 }
 
 .site-title {
-    &,
-    &:visited {
-        color: $grey-dark;
-    }
+  &,
+  &:visited {
+    color: $grey-dark;
+  }
 }
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey;
-    border-left: 4px solid $grey-light;
+  color: $grey;
+  border-left: 4px solid $grey-light;
 }
 
-
 pre {
-    border: 1px solid $grey-light;
-    background-color: #eef;
+  border: 1px solid $grey-light;
+  background-color: #eef;
 }
 
 /**
  * Icons
  */
 .icon {
-    > svg {
-        path {
-            fill: $grey;
-        }
+  > svg {
+    path {
+      fill: $grey;
     }
+  }
 }
 
 /* text decorations */
 .u {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 .strike {
-    color: $grey;
-	text-decoration: line-through;
+  color: $grey;
+  text-decoration: line-through;
 }
 /* used in SpellCheck results */
 strong.highlight {
-    background-color: #cBe6fd;
-    padding: 1pt;
+  background-color: #cbe6fd;
+  padding: 1pt;
 }
 /* colored texts (low css priority) */
 .warning {
-    color: #a94442; /* Bootstrap .alert-danger */
+  color: #a94442; /* Bootstrap .alert-danger */
 }
 .error {
-    color: #a94442;
+  color: #a94442;
 }

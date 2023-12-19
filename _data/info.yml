@@ -1,35 +1,39 @@
-overview:
-  - 이 연구실은 아주 좋은 연구실 입니다.
-  - 연구실에 대한 대략적인 소개를 _data 폴더의 info.yml 파일에 써 주세요.
-
 mainFig:
-  - frontImg_1.jpg
-  - frontImg_2.jpg
-  - frontImg_3.jpg
+  - title: "Item 1"
+    description: "이 연구실은 아주 좋은 연구실 입니다."
+    image: "frontImg_1.jpg"
+  - title: "Item 2"
+    description: "Description for Item 2."
+    image: "frontImg_2.jpg"
+  - title: "Item 3"
+    description: "Description for Item 3."
+    image: "frontImg_3.jpg"
+
+introduction: |
+  Vehicular Intelligence Lab is focused on implementation and verification of intelligent transportation system.
+  We are particularly interested in design, implementation, and testing of multimedia transmission by short-range wireless communication networks.
+  Also, we are engaged with multimedia signal processing, theoretically and practically.
+  To deliver multimedia contents through wireless links, background knowledge on communication, computer vision, and networking is required.
+  In order to understand multimedia signal processing, knowledge on image processing is indispensable.
+  If you have knowledge on both areas, you are welcome.
+  If not, you are still welcome on the condition that you will do your best.
+
+  Level of intelligence depends on what you do when you have problems.
+  Goal of research works being carried out by the lab is to elevate your current level of intelligence to higher level.
+  However, we just provide you a chance and the remaining to get a higher level is up to you.
 
 affiliation:
-  - school: 치의학대학원 #단과대학
-    department: 구강생리학교실 #교실
-    program: 신경생물학전공 #전공
-
-  - school: 자연과학대학 #단과대학
-    department: #교실
-    program: 협동과정 뇌과학전공 #전공
-
-  - school: BK21+ #단과대학
-    department: 치의학생명과학사업단
-    program: #전공
-
-  - school: 치학연구소 #단과대학
-    department: #교실
-    program:  #전공
+  school: 한국과학기술원
+  department: 조천식모빌리티대학원
+  program:
 
 address:
-  building: 병원 # 본관/재료/병원/관악 넷중 하나로 입력
-  office: 50x호
-  lab: 50x호
+  building: Munjiro 193, Yuseonggu, Daejeon, 34051, South Korea
+
+  office: F40x호
+  lab: F315호
 
 phone:
-  office: 02-880-xxxx
-  lab: 02-880-xxxx
-  fax: 02-762-xxxx
+  office:
+  lab: 042-350-1287
+  fax: 042-350-1250

@@ -1,11 +1,13 @@
 - title: 홈페이지 오픈!!
   notice: 공지사항은 _data 폴더 안에 notice.yml 파일에 작성하세요.
-  status: open
+  status: close
 
 - title: 두번째 공지
   notice: 이 공지는 보이지 않습니다. (status가 close 입니다)
   status: close
 
-- title: 학생모집
-  notice: 야심찬 학생 찾아오세요.
+- title: "2024 봄학기 석박사인턴 및 신입생 모집"
+  notice: |
+    Vehicular Intelligence Lab의 연관분야에 관심이 있고, 목표달성을 위한 열정을 가진 인턴 및 신입생을 모집합니다.
+    Contact: ngng9957@kaist.ac.kr (김태영 박사과정)
   status: open
