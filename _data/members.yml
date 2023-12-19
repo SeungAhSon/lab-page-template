@@ -31,6 +31,8 @@ PI:
     jobtitle: Professor
     portrait: ../img/ppl/vil.gif
     e-mail: dshar@kaist.ac.kr
+    website: http://vil.kaist.ac.kr
+    phone : +82-42-350-1267
 
 Members:
   - name: 최영미
@@ -60,6 +62,131 @@ Members:
     portrait: ../img/ppl/horang1976.gif
     e-mail: hjjin1995@kaist.ac.kr
 
+  - name: 김태영
+    engName: Taeyoung Kim
+    degree:
+    bio:
+    period:
+    jobtitle: Ph.D Candidate
+    portrait: ../img/ppl/ngng9957.gif
+    e-mail: ngng9957@kaist.ac.kr
+
+  - name:
+    engName: Sarvar Hussain Nengroo
+    degree:
+    bio:
+    period:
+    jobtitle: Ph.D Candidate
+    portrait: ../img/ppl/20215415.gif
+    e-mail: sarvar@kaist.ac.kr
+
+  - name:
+    engName: Lai Dang Quoc Vinh
+    degree:
+    bio:
+    period:
+    jobtitle: Ph.D Candidate
+    portrait: ../img/ppl/20214194.gif
+    e-mail: ldqvinh@kaist.ac.kr
+
+  - name:
+    engName: Mishra Sumit
+    degree:
+    bio:
+    period:
+    jobtitle: Ph.D Candidate
+    portrait: ../img/ppl/sumitmishra209.gif
+    e-mail: sumitmiishra209@kaist.ac.kr
+
+  - name:
+    engName: Neha Sengar
+    degree:
+    bio:
+    period:
+    jobtitle: Ph.D Candidate
+    portrait: ../img/ppl/Neha.gif
+    e-mail: neha.sengar@kaist.ac.kr
+
+  - name: 박범근
+    engName: Bumgeun Park
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/j4t123.gif
+    e-mail: j4t123@kaist.ac.kr
+
+  - name: 문우현
+    engName: Woohyeon Moon
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/mwh510.gif
+    e-mail: moonstar@kaist.ac.kr
+
+  - name: 이지희
+    engName: Jihui Lee
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/wlgml0920.gif
+    e-mail: jihui@kaist.ac.kr
+
+  - name: 손승아
+    engName: Seungah Son
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/Seungah.gif
+    e-mail: seungahson@kaist.ac.kr
+
+  - name: 정해찬
+    engName: Haechan Jeong
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/Haechan.gif
+    e-mail: haechan@kaist.ac.kr
+
+  - name:
+    engName: Medhavi Mishra
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/guest1.gif
+    e-mail: medhavi132@kaist.ac.kr
+
+  - name: 강태민
+    engName: Taemin Kang
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/Taemin.gif
+    e-mail: tmkang9826@kaist.ac.kr
+
+  - name:
+    engName: Andres Saurez
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/Andres.gif
+    e-mail: asaurez@kaist.ac.kr
+
+  - name:
+    engName: Hello
+    degree:
+    bio:
+    period:
+    jobtitle: M.S. Candidate
+    portrait: 
+    e-mail: temp
 Past:
   - name: 이상금
     engName: SangKeum Lee

@@ -4,7 +4,7 @@
       <div class="portrait">
         <img
           onclick="window.open('{{ person.web }}');"
-          src="{% if person.portrait %}{{site.url}}/img/{{ person.portrait}}{% elsif person.extportrait %}{{ person.extportrait }}{% else %}{{site.url}}/img/anonymous.jpg{% endif %}"
+          src="{% if person.portrait %}{{site.url}}/img/{{ person.portrait}}{% elsif person.extportrait %}{{ person.extportrait }}{% else %}{{site.url}}/img/ppl/anonymous.jpg{% endif %}"
           class="card-img"
           alt="..."
         />

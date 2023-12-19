@@ -1,10 +1,11 @@
 ---
 layout: post
 title: News2
-subtitle: Improved oral hygiene care attenuates the cardiovascular risk of oral health disease
+subtitle: subtitle_msgsd5555
 date: 2018/02/03
 fig:
-link: https://doi.org/10.1093/eurheartj/ehy836
+  - news/ehj_40_14coverfig.png
+link:
 published: true
 ---
 

@@ -1,13 +1,13 @@
 mainFig:
   - title: "Item 1"
     description: "이 연구실은 아주 좋은 연구실 입니다."
-    image: "frontImg_1.jpg"
+    image: "info/frontImg_1.jpg"
   - title: "Item 2"
     description: "Description for Item 2."
-    image: "frontImg_2.jpg"
+    image: "info/frontImg_2.jpg"
   - title: "Item 3"
     description: "Description for Item 3."
-    image: "frontImg_3.jpg"
+    image: "info/frontImg_3.jpg"
 
 introduction: |
   Vehicular Intelligence Lab is focused on implementation and verification of intelligent transportation system.

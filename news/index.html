@@ -5,41 +5,61 @@ menu: news
 ---
 
 <hr />
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <header class="post-header">
-  <h1 class="post-title">
+  <h6 class="post-title">
     <i class="fa fa-home" aria-hidden="true"></i> > News
-  </h1>
+  </h6>
 </header>
 <div id="news" class="container-fluid pt-4">
   <!-- This loops through the paginated posts -->
   <div class="row">
     {% for post in paginator.posts %}
-      <div class="card-group col-md-6 col-lg-6 col-xl-4">
-        <a href="{{ post.link }}" class="card m-2 shadow card-link">
-          <!-- Card content goes here -->
-          <div class="card-header">
-            <h3 class="mb-0">{{ post.title }}</h3>
-            <p class="author ml-2 mt-0 mb-0">
-              <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span>
-            </p>
-          </div>
-          <div class="card-body">
+    <div class="card-group col-md-6 col-lg-6 col-xl-4">
+      <a href="{{site.url}}{{ post.url }}" class="card m-2 shadow card-link">
+        <!-- Card content goes here -->
+        <div class="card-header">
+          <h3 class="mb-0">{{ post.title }}</h3>
+          <p class="author ml-2 mt-0 mb-0">
+            <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span>
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="image-container">
             {% if post.fig %}
-              {% if post.fig contains "http" %}
-                <img src="{{ post.fig }}" class="card-img-top" />
-              {% else %}
-                <img src="../img/{{ post.fig }}" class="card-img-top" />
-              {% endif %}
+            <img src="../img/{{ post.fig[0] }}" class="card-img-top" />
             {% endif %}
-            <h5 class="card-title">{{ post.subtitle }}</h5>
-            <p class="card-text text-justify">{{ post.content }}</p>
           </div>
-        </a>
-      </div>
+          <h5 class="card-title">{{ post.subtitle }}</h5>
+        </div>
+      </a>
+    </div>
     {% endfor %}
   </div>
 </div>
+
+<!-- Updated script for handling redirection -->
+<script>
+  $(document).ready(function () {
+    $(".card-link").click(function (e) {
+      e.preventDefault();
+
+      var imageContainer = $(this).find(".image-container");
+      var postPageUrl = $(this).attr("href");
+
+      // Check if there are images in the container
+      if (imageContainer.children("img").length > 0) {
+        // For posts with images, redirect to the first image's post page
+        var firstImageSrc = imageContainer.find("img:first").attr("src");
+        var postPageWithFirstImage = postPageUrl + firstImageSrc;
+        window.location.href = postPageWithFirstImage;
+      } else {
+        // For posts without images, redirect to the post page directly
+        window.location.href = postPageUrl;
+      }
+    });
+  });
+</script>
 
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
