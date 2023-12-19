@@ -3,7 +3,6 @@
     <div class="row no-gutters person">
       <div class="portrait">
         <img
-          onclick="window.open('{{ person.web }}');"
           src="{% if person.portrait %}{{site.url}}/img/{{ person.portrait}}{% elsif person.extportrait %}{{ person.extportrait }}{% else %}{{site.url}}/img/ppl/anonymous.jpg{% endif %}"
           class="card-img"
           alt="..."
@@ -23,10 +22,19 @@
         </div>
 
         <div class="card-text">
-          {{ person.bio | newline_to_br | markdownify }}
+          <p small style="word-wrap: break-word">{{ person.bio }}</p>
         </div>
+
         <div class="jobtitle">
           <code>{{person.jobtitle}}</code>
+          {% if person.google_scholar %}
+          <img
+            onclick="window.open('https://scholar.google.com/citations?user={{ person.google_scholar }}');"
+            src="{{site.url}}/img/default/google_scholar.png"
+            alt="Google Scholar"
+            style="width: 24px; height: 24px"
+          />
+          {% endif %}
         </div>
       </div>
     </div>

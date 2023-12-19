@@ -6,11 +6,10 @@
   position: relative; /* child elements are relative to this */
   min-height: 100%;
   height: auto !important;
-  width: 100%;
   padding-top: $header-height + 10px; /* header height. 38px + 1px border -12px for esthetic */
-  padding-right: floor($grid-gutter-width / 2); //1em;
+  padding-right: calc($grid-gutter-width / 2);
   padding-bottom: 68px - $spacing-unit; /* footer height + pageinfo height */
-  padding-left: floor($grid-gutter-width / 2); //1em;
+  padding-left: calc($grid-gutter-width / 2);
   margin: auto;
   &.container {
     margin-bottom: $spacing-unit;
@@ -461,7 +460,8 @@
         }
         .card-body {
           margin-left: 9.1em;
-          height: 9.1em;
+          height: 12em;
+
           padding: none;
           background-color: white;
           .card-title {

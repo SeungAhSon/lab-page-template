@@ -21,8 +21,7 @@ PI:
       High-efficiency digital system design for power grid
     Honors_and_Awards:
       Honors: |
-        Minister Commendation (2016)
-        Ministry of Land, Infrastructure, and Transport
+        Minister Commendation (2016), Ministry of Land, Infrastructure, and Transport
       Awards: |
         IEEE Transactions on Vehicular Technology (2000)
         ENICS International Conference (2008)
@@ -33,9 +32,10 @@ PI:
     e-mail: dshar@kaist.ac.kr
     website: http://vil.kaist.ac.kr
     phone : +82-42-350-1267
+    google_scholar: DLByqJgAAAAJ
 
-Members:
-  - name: 최영미
+etcMembers:
+  - name: 
     engName: YoungMi Choi
     degree:
     bio:
@@ -44,7 +44,7 @@ Members:
     portrait: ../img/ppl/howifegod.gif
     e-mail: howifegod@kaist.ac.kr
 
-  - name: 진주희
+  - name: 
     engName: JuHee Jin
     degree:
     bio:
@@ -53,131 +53,146 @@ Members:
     portrait: ../img/ppl/worth85.gif
     e-mail: worth85@kaist.ac.kr
 
-  - name: 진호준
+Members:
+  - name: 
     engName: Hojun Jin
     degree:
-    bio:
+    bio: Smart Grid Technologies, Scheduling Optimization of Power Systems
     period:
-    jobtitle: Post Doc
+    jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/horang1976.gif
     e-mail: hjjin1995@kaist.ac.kr
+    google_scholar: -SC_1hwAAAAJ&hl=ko&oi=ao
 
-  - name: 김태영
+  - name: 
     engName: Taeyoung Kim
     degree:
-    bio:
+    bio: Multi-goal Reinforcement Learning, Robotics, Artificial Intelligence 
     period:
-    jobtitle: Ph.D Candidate
+    jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/ngng9957.gif
     e-mail: ngng9957@kaist.ac.kr
+    google_scholar: 
 
   - name:
     engName: Sarvar Hussain Nengroo
     degree:
-    bio:
+    bio: Microgrids, Distributed Generation, Renewable Energy 
     period:
-    jobtitle: Ph.D Candidate
+    jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/20215415.gif
     e-mail: sarvar@kaist.ac.kr
+    google_scholar: 
 
   - name:
     engName: Lai Dang Quoc Vinh
     degree:
-    bio:
+    bio: Deep Learning, Computer Vision, Autonomous Driving 
     period:
-    jobtitle: Ph.D Candidate
+    jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/20214194.gif
     e-mail: ldqvinh@kaist.ac.kr
+    google_scholar: 
 
   - name:
     engName: Mishra Sumit
     degree:
-    bio:
+    bio: Urban Mobility and Smart Transportation, Computer Vision for Perception, Accident Prevention with Advanced Driver Assistance System 
     period:
-    jobtitle: Ph.D Candidate
+    jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/sumitmishra209.gif
     e-mail: sumitmiishra209@kaist.ac.kr
+    google_scholar: 
 
   - name:
     engName: Neha Sengar
     degree:
-    bio:
+    bio: Robotics Vision and Perception, Intelligent Surveillance, Artificial Intelligence 
     period:
-    jobtitle: Ph.D Candidate
+    jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/Neha.gif
     e-mail: neha.sengar@kaist.ac.kr
+    google_scholar: 
 
-  - name: 박범근
+  - name: 
     engName: Bumgeun Park
     degree:
-    bio:
+    bio: Exploration in Reinforcement Learning, Off-policy Reinforcement Learning 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/j4t123.gif
     e-mail: j4t123@kaist.ac.kr
+    google_scholar: 
 
-  - name: 문우현
+  - name: 
     engName: Woohyeon Moon
     degree:
-    bio:
+    bio: Transformer in Natural Language Processing, Robot Path Planning with Reinforcement Learning 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/mwh510.gif
     e-mail: moonstar@kaist.ac.kr
+    google_scholar: 
 
-  - name: 이지희
+  - name: 
     engName: Jihui Lee
     degree:
-    bio:
+    bio: Deep Learning, Computer Vision, Perception for Autonomous Driving 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/wlgml0920.gif
     e-mail: jihui@kaist.ac.kr
+    google_scholar: 
 
-  - name: 손승아
+  - name: 
     engName: Seungah Son
     degree:
-    bio:
+    bio: Natural Language Processing, Reinforcement Learning, Robot Control 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Seungah.gif
     e-mail: seungahson@kaist.ac.kr
+    google_scholar: 
 
-  - name: 정해찬
+  - name: 
     engName: Haechan Jeong
     degree:
-    bio:
+    bio: Robot Control, Simulation for Digital Twin, Reinforcement Learning
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Haechan.gif
     e-mail: haechan@kaist.ac.kr
+    google_scholar: 
 
   - name:
     engName: Medhavi Mishra
     degree:
-    bio:
+    bio: Transportation Network Optimization, Traffic Simulation and Modelling, Sustainable Mobility 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/guest1.gif
     e-mail: medhavi132@kaist.ac.kr
+    google_scholar: 
 
-  - name: 강태민
+  - name: 
     engName: Taemin Kang
     degree:
-    bio:
+    bio: Robotics, Artificial Intelligence, Multi-agent System 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Taemin.gif
     e-mail: tmkang9826@kaist.ac.kr
+    google_scholar: 
 
   - name:
     engName: Andres Saurez
     degree:
-    bio:
+    bio: Visual Language Navigation, Autonomous Vehicles, Computer Vision 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Andres.gif
     e-mail: asaurez@kaist.ac.kr
+    google_scholar: 
 
   - name:
     engName: Hello
@@ -187,12 +202,15 @@ Members:
     jobtitle: M.S. Candidate
     portrait: 
     e-mail: temp
+    google_scholar: 
+
 Past:
-  - name: 이상금
+  - name: 
     engName: SangKeum Lee
-    degree: Ph D.
-    period: 2011/9-2013/1
-    bio:
-    jobtitle: 한밭대학교 교수
+    degree: 
+    period: 
+    bio: 한밭대학교 교수
+    jobtitle: Ph.D.
     portrait: ../img/ppl/sd974201.gif
     e-mail: sd974201@kaist.ac.kr
+    google_scholar: 
