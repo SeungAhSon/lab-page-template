@@ -48,14 +48,16 @@ menu: news
       var postPageUrl = $(this).attr("href");
 
       // Check if there are images in the container
-      if (imageContainer.children("img").length > 0) {
-        // For posts with images, redirect to the first image's post page
+      if (imageContainer.children("img").length == 0) {
+        window.location.href = postPageUrl;
+      } else if (imageContainer.children("img").length === 1) {
+        window.location.href = $(this).attr("href");
+      } else {
         var firstImageSrc = imageContainer.find("img:first").attr("src");
+        var postPageUrl = $(this).attr("href");
+
         var postPageWithFirstImage = postPageUrl + firstImageSrc;
         window.location.href = postPageWithFirstImage;
-      } else {
-        // For posts without images, redirect to the post page directly
-        window.location.href = postPageUrl;
       }
     });
   });
