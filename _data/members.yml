@@ -57,7 +57,9 @@ Members:
   - name: 
     engName: Hojun Jin
     degree:
-    bio: Smart Grid Technologies, Scheduling Optimization of Power Systems
+    bio: |
+      - Smart Grid Technologies
+      - Scheduling Optimization of Power Systems
     period:
     jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/horang1976.gif
@@ -67,7 +69,10 @@ Members:
   - name: 
     engName: Taeyoung Kim
     degree:
-    bio: Multi-goal Reinforcement Learning, Robotics, Artificial Intelligence 
+    bio: |
+      - Multi-goal Reinforcement Learning
+      - Robotics
+      - Artificial Intelligence 
     period:
     jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/ngng9957.gif
@@ -77,7 +82,10 @@ Members:
   - name:
     engName: Sarvar Hussain Nengroo
     degree:
-    bio: Microgrids, Distributed Generation, Renewable Energy 
+    bio: |
+      - Microgrids
+      - Distributed Generation
+      - Renewable Energy 
     period:
     jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/20215415.gif
@@ -87,7 +95,10 @@ Members:
   - name:
     engName: Lai Dang Quoc Vinh
     degree:
-    bio: Deep Learning, Computer Vision, Autonomous Driving 
+    bio: |
+      - Deep Learning
+      - Computer Vision
+      - Autonomous Driving 
     period:
     jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/20214194.gif
@@ -97,7 +108,10 @@ Members:
   - name:
     engName: Mishra Sumit
     degree:
-    bio: Urban Mobility and Smart Transportation, Computer Vision for Perception, Accident Prevention with Advanced Driver Assistance System 
+    bio: |
+      - Urban Mobility and Smart Transportation
+      - Computer Vision for Perception
+      - Accident Prevention with Advanced Driver Assistance System 
     period:
     jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/sumitmishra209.gif
@@ -107,7 +121,10 @@ Members:
   - name:
     engName: Neha Sengar
     degree:
-    bio: Robotics Vision and Perception, Intelligent Surveillance, Artificial Intelligence 
+    bio: |
+      - Robotics Vision and Perception
+      - Intelligent Surveillance
+      - Artificial Intelligence 
     period:
     jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/Neha.gif
@@ -117,7 +134,9 @@ Members:
   - name: 
     engName: Bumgeun Park
     degree:
-    bio: Exploration in Reinforcement Learning, Off-policy Reinforcement Learning 
+    bio: |
+      - Exploration in Reinforcement Learning
+      - Off-policy Reinforcement Learning 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/j4t123.gif
@@ -127,7 +146,9 @@ Members:
   - name: 
     engName: Woohyeon Moon
     degree:
-    bio: Transformer in Natural Language Processing, Robot Path Planning with Reinforcement Learning 
+    bio: |
+      - Transformer in Natural Language Processing
+      - Robot Path Planning with Reinforcement Learning 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/mwh510.gif
@@ -137,7 +158,10 @@ Members:
   - name: 
     engName: Jihui Lee
     degree:
-    bio: Deep Learning, Computer Vision, Perception for Autonomous Driving 
+    bio: |
+      - Deep Learning
+      - Computer Vision
+      - Perception for Autonomous Driving 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/wlgml0920.gif
@@ -147,7 +171,10 @@ Members:
   - name: 
     engName: Seungah Son
     degree:
-    bio: Natural Language Processing, Reinforcement Learning, Robot Control 
+    bio: |
+      - Natural Language Processing
+      - Reinforcement Learning
+      - Robot Control 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Seungah.gif
@@ -157,7 +184,10 @@ Members:
   - name: 
     engName: Haechan Jeong
     degree:
-    bio: Robot Control, Simulation for Digital Twin, Reinforcement Learning
+    bio: |
+      - Robot Control
+      - Simulation for Digital Twin
+      - Reinforcement Learning
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Haechan.gif
@@ -167,7 +197,10 @@ Members:
   - name:
     engName: Medhavi Mishra
     degree:
-    bio: Transportation Network Optimization, Traffic Simulation and Modelling, Sustainable Mobility 
+    bio: |
+      - Transportation Network Optimization
+      - Traffic Simulation and Modelling
+      - Sustainable Mobility 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/guest1.gif
@@ -177,7 +210,10 @@ Members:
   - name: 
     engName: Taemin Kang
     degree:
-    bio: Robotics, Artificial Intelligence, Multi-agent System 
+    bio: |
+      - Robotics
+      - Artificial Intelligence
+      - Multi-agent System 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Taemin.gif
@@ -187,7 +223,10 @@ Members:
   - name:
     engName: Andres Saurez
     degree:
-    bio: Visual Language Navigation, Autonomous Vehicles, Computer Vision 
+    bio: |
+      - Visual Language Navigation
+      - Autonomous Vehicles
+      - Computer Vision 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Andres.gif

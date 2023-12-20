@@ -17,12 +17,15 @@
             >
           </h4>
           {% if person.e-mail %}
-          <p>{{person.e-mail}}</p>
+          <p style="margin-bottom: 5px; display: block;">{{person.e-mail}}</p>
           {% endif %}
         </div>
 
         <div class="card-text">
-          <p small style="word-wrap: break-word">{{ person.bio }}</p>
+          <p style="line-height: 1;"><strong>Research Interests:</strong></p>
+          <span style="line-height: 1; margin-top: -10px; display: block;"> {{ person.bio |
+            newline_to_br | markdownify }}
+          </span>
         </div>
 
         <div class="jobtitle">
