@@ -172,9 +172,9 @@ Members:
     engName: Seungah Son
     degree:
     bio: |
-      Natural Language Processing
-      Reinforcement Learning
-      Robot Control 
+      &bull; Natural Language Processing
+      &bull; Reinforcement Learning
+      &bull; Robot Control 
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Seungah.gif
