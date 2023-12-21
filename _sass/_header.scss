@@ -29,10 +29,11 @@ $header-height: 45px;
   .navbar-brand {
     display: inline;
     .logo {
-      height: $header-height - 6;
+      height: $header-height - 10;
+      padding-top: 5px;
     }
     .logo2 {
-      height: $header-height - 6;
+      height: $header-height - 10;
     }
     .navbar-btn {
       margin: 3px 0;
