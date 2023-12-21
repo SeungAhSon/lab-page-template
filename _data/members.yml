@@ -1,5 +1,5 @@
 PI:
-  - name: 하동수
+  - name: 
     engName: Dongsoo Har
     degree:
     phone: +82-42-350-1267
@@ -111,7 +111,7 @@ Members:
     bio: |
       &bull; Urban Mobility and Smart Transportation
       &bull; Computer Vision for Perception
-      &bull; Accident Prevention with Advanced Driver Assistance System 
+      &bull; Accident Prevention with ADAS
     period:
     jobtitle: Ph.D. Candidate
     portrait: ../img/ppl/sumitmishra209.gif
@@ -153,7 +153,7 @@ Members:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/mwh510.gif
     e-mail: moonstar@kaist.ac.kr
-    google_scholar: 
+    google_scholar: FWmjhUQAAAAJ&hl=ko
 
   - name: 
     engName: Jihui Lee
@@ -251,5 +251,5 @@ Past:
     bio: 한밭대학교 교수
     jobtitle: Ph.D.
     portrait: ../img/ppl/sd974201.gif
-    e-mail: sd974201@kaist.ac.kr
+    e-mail: 
     google_scholar: 

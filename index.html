@@ -8,8 +8,7 @@ layout: default
       <h1>{{ site.title }}</h1>
     </header>
   {% endif %}
-	<hr>
-	
+
 	{% for item in site.data.notice %}
 			{% if item.status == "open" %}
 					<div id="notice" class="shadow-lg mb-3">

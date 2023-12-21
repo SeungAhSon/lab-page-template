@@ -16,10 +16,13 @@
               endif %}{{person.degree}}</small
             >
           </h4>
+          {% if person.e-mail %}
+          <p style="margin-bottom: 5px; display: block">{{person.e-mail}}</p>
+          {% endif %}
         </div>
 
         <div class="card-text">
-          <p style="line-height: 1"><strong>Research Interests:</strong></p>
+          <p style="line-height: 1"></p>
           <span
             style="
               line-height: 1;
@@ -34,13 +37,7 @@
 
         <div class="jobtitle">
           <code>{{person.jobtitle}}</code>
-          {% if person.e-mail %}
-          <i
-            class="far fa-envelope"
-            onclick="copyEmail('{{ person.e-mail }}')"
-            style="font-size: 20px; color: #3669c3; vertical-align: middle"
-          ></i>
-          {% endif %} {% if person.google_scholar %}
+          {% if person.google_scholar %}
           <img
             onclick="window.open('https://scholar.google.com/citations?user={{ person.google_scholar }}');"
             src="{{site.url}}/img/default/google_scholar.png"
@@ -52,16 +49,4 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function copyEmail(email) {
-      const dummyInput = document.createElement("textarea");
-      document.body.appendChild(dummyInput);
-      dummyInput.value = email;
-      dummyInput.select();
-      document.execCommand("copy");
-      document.body.removeChild(dummyInput);
-      alert("Email copied to clipboard: " + email);
-    }
-  </script>
 </div>

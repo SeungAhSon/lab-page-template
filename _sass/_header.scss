@@ -5,6 +5,8 @@ $header-height: 45px;
   min-height: $header-height;
 
   border: 0px solid transparent;
+  border-bottom: 1px solid;
+  border-color: #dee2e6;
   font-size: 14px;
 
   padding-left: calc($grid-gutter-width / 4);
