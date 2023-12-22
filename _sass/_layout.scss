@@ -6,7 +6,7 @@
   position: relative; /* child elements are relative to this */
   min-height: 100%;
   height: auto !important;
-  padding-top: $header-height + 10px; /* header height. 38px + 1px border -12px for esthetic */
+  padding-top: $header-height + 20px; /* header height. 38px + 1px border -12px for esthetic */
   padding-right: calc($grid-gutter-width / 2);
   padding-bottom: 68px - $spacing-unit; /* footer height + pageinfo height */
   padding-left: calc($grid-gutter-width / 2);
@@ -47,7 +47,7 @@
 ===========================================================*/
 
 #pagebox {
-  padding-top: 0px;
+  padding-top: 3px;
   header {
     margin: 0;
 
@@ -125,7 +125,7 @@
 
 #research {
   .card-img {
-    max-width: 375px;
+    max-width: 50vw;
     display: block;
     margin: 0 auto;
   }

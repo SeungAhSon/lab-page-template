@@ -6,7 +6,7 @@ date: 2018/02/03
 fig:
   - news/ehj_40_14coverfig.png
 link:
-published: true
+published: false
 ---
 
 <b>Aim</b>

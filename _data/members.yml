@@ -28,7 +28,7 @@ PI:
         IEEE APWCE International Conference (2016)
     period:
     jobtitle: Professor
-    portrait: ../img/ppl/vil.gif
+    portrait: ../img/ppl/vil.png
     e-mail: dshar@kaist.ac.kr
     website: http://vil.kaist.ac.kr
     phone : +82-42-350-1267
@@ -52,6 +52,7 @@ etcMembers:
     jobtitle: Researcher
     portrait: ../img/ppl/worth85.gif
     e-mail: worth85@kaist.ac.kr
+
 
 Members:
   - name: 
