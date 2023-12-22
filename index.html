@@ -130,24 +130,31 @@ layout: default
     </div>
   </div>
 
-  <div>
-    <h5 class="card-header">Publications</h5>
-    <ul class="card-body">
-      {% for paper in site.data.publications %}
-      <div>
-        <strong
-          ><big
-            ><a style="color: black; margin-top: 50px" href="{{ paper.Link }}"
-              >{{ paper.Title }}</a
-            ></big
-          ></strong
-        >
-      </div>
-      <div style="margin-left: 10px; margin-top: 0px">{{paper.Authors}}</div>
-      <div style="margin-left: 10px; margin-top: 0px">
-        {{ paper.Journal }}, {{ paper.Year }}
-      </div>
-      {% endfor %}
-    </ul>
+  <h3>Key Publications</h3>
+  <div id="publications" class="container-fluid">
+	<ul class="card-body">
+  	{% for paper in site.data.publications %}
+		{% if paper.Important contains
+      "es" or paper.Important contains "tr" %}
+      <li class="mb-2">
+        <div>
+          <strong><big><a style="color: black; margin-top: 50px;" href="{{ paper.Link }}">{{ paper.Title }}</a></big></strong>
+        </div>
+        <div style="margin-left: 10px; margin-top: 0px;">
+          {{paper.Authors}}
+        </div>
+        {% if paper.Journal %}
+        <div style="margin-left: 10px; margin-top: 0px;">
+          {{ paper.Journal }}, {{ paper.Year }}
+        </div>
+        {% endif %}
+        {% if paper.Conference %}
+        <div style="margin-left: 10px; margin-top: 0px;">
+          {{ paper.Conference }}, {{ paper.Year }}
+        </div>
+        {% endif %}
+      </li>
+  	{% endif %}
+  	{% endfor %}
   </div>
 </div>
