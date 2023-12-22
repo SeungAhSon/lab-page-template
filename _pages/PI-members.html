@@ -1,4 +1,4 @@
-<div style="padding: 20px;">
+<div style="padding: 20px">
   <div class="row no-gutters person">
     <div class="portrait">
       <img
@@ -16,73 +16,85 @@
           >
         </h4>
       </div>
-      <button class="btn btn-sm btn-outline-primary copy-btn" data-clipboard-text="{{ person.e-mail }}">
+      <button
+        class="btn btn-sm btn-outline-primary copy-btn"
+        data-clipboard-text="{{ person.e-mail }}"
+      >
         dshar@kaist.ac.kr
       </button>
-      <button class="btn btn-sm btn-outline-primary copy-btn" data-clipboard-text="{{ person.phone }}">
+      <button
+        class="btn btn-sm btn-outline-primary copy-btn"
+        data-clipboard-text="{{ person.phone }}"
+      >
         +82-42-350-1267
       </button>
       <img
-          onclick="window.open('https://scholar.google.com/citations?user={{ person.google_scholar }}');"
-          src="{{site.url}}/img/default/google_scholar.png"
-          alt="Google Scholar"
-          style="width: 24px; height: 24px"
-        />
+        onclick="window.open('https://scholar.google.com/citations?user={{ person.google_scholar }}');"
+        src="{{site.url}}/img/default/google_scholar.png"
+        alt="Google Scholar"
+        style="width: 24px; height: 24px"
+      />
       <div class="card-text">
-        <hr>
+        <hr />
         <p style="margin-bottom: 1px; display: block">
           <strong>Bio:</strong> {{ person.bio | newline_to_br | markdownify }}
         </p>
-        <hr>
+        <hr />
         <p style="margin-bottom: 1px; display: block">
           <strong>Work Experience:</strong> {{ person.Work | newline_to_br |
           markdownify }}
         </p>
-        <hr>
+        <hr />
         <p style="margin-bottom: 1px; display: block">
-          <strong>Research Interests:</strong> {{ person.Research | newline_to_br | markdownify }}
+          <strong>Research Interests:</strong> {{ person.Research |
+          newline_to_br | markdownify }}
         </p>
-        <hr>
+        <hr />
         <p style="margin-bottom: 1px; display: block">
           <strong>Honors:</strong>
           {{ person.Honors_and_Awards.Honors | newline_to_br |markdownify }}
         </p>
-        <hr>
+        <hr />
         <p style="margin-bottom: 1px; display: block">
           <strong>Best Paper Awards:</strong>
           {{ person.Honors_and_Awards.Awards | newline_to_br |markdownify }}
         </p>
       </div>
-
-
     </div>
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  var clipboard = new ClipboardJS('.copy-btn');
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var clipboard = new ClipboardJS(".copy-btn");
 
-        clipboard.on('success', function (e) {
+        clipboard.on("success", function (e) {
           e.clearSelection();
-          alert('Copied to clipboard!');
+          alert("Copied to clipboard!");
         });
-
-  });
-  </script>
-
+      });
+    </script>
   </div>
   <div>
     <h5 class="card-header">Publications</h5>
     <ul class="card-body">
       {% for paper in site.data.publications %}
-        <div>
-          <strong><big>{{paper.Title | replace: "2+", "<sup>2+</sup>" | replace: "Na+", "Na<sup>+</sup>" | replace: "K+", "K<sup>+</sup>" | replace: "H+", "H<sup>+</sup>" | replace: "HCO3-", "HCO<sup>3-</sup>"}}</big></strong>
-        </div>
-        <div>
-          {{ paper.AuthorList | replace: "*", "<sup>*</sup>" | replace: "#", "<sup>#</sup>" }}
-        </div>
-        <div>
-          {% if paper.DOI %}<a href="https://doi.org/{{paper.DOI}}">{% elsif paper.Id %}<a href="https://www.ncbi.nlm.nih.gov/pubmed/{{paper.Id}}">{% endif %}{{paper.FullJournalName}} {{paper.PubYear}}{% if paper.month contains "ress" %}<i>In Press</i>{% else %}{% if paper.Volume %};{{paper.Volume}}{% endif %}{% if paper.Issue %}({{paper.Issue}}){% endif %}{% if paper.Pages %}:{{paper.Pages}}{% endif %}.{% endif %}{% if paper.DOI or paper.Id %}</a>{% endif %}
-        </div>
-      {% endfor %}
+      <div>
+        <strong
+          ><big
+            ><a style="color: black; margin-top: 50px" href="{{ paper.Link }}"
+              >{{ paper.Title }}</a
+            ></big
+          ></strong
+        >
+      </div>
+      <div style="margin-left: 10px; margin-top: 0px">{{paper.Authors}}</div>
+      {% if paper.Journal %}
+      <div style="margin-left: 10px; margin-top: 0px">
+        {{ paper.Journal }}, {{ paper.Year }}
+      </div>
+      {% endif %} {% if paper.Conference %}
+      <div style="margin-left: 10px; margin-top: 0px">
+        {{ paper.Conference }}, {{ paper.Year }}
+      </div>
+      {% endif %} {% endfor %}
     </ul>
   </div>
 </div>

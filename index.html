@@ -4,106 +4,157 @@ layout: default
 
 <div id="home">
   {% if site.show_header %}
-    <header>
-      <h1>{{ site.title }}</h1>
-    </header>
-  {% endif %}
-
-	{% for item in site.data.notice %}
-			{% if item.status == "open" %}
-					<div id="notice" class="shadow-lg mb-3">
-							<div class="jumbotron">
-									<h4>{{ item.title }}</h4>
-									<p>{{ item.notice }}</p>
-									<button id="closeNotice">Close</button>
-							</div>
-					</div>
-
-					<script>
-							// JavaScript to handle the close button
-							document.getElementById('closeNotice').addEventListener('click', function() {
-									var notice = document.getElementById('notice');
-									notice.style.display = 'none';
-							});
-					</script>
-			{% endif %}
-	{% endfor %}
-
-
-
-	<div id="carouselIndicators" class="carousel slide shadow" data-ride="carousel">
-			<ol class="carousel-indicators">
-					{% for fig in site.data.info.mainFig %}
-							<li data-target="#carouselIndicators" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
-					{% endfor %}
-			</ol>
-
-			<div class="carousel-inner">
-					{% for fig in site.data.info.mainFig %}
-							<div class="carousel-item {% if forloop.first %}active{% endif %}">
-									<div class="row" style="margin: 0px">
-											<div class="col-md-6 text-section">
-													<h3>{{ fig.title }}</h3>
-													<p>{{ fig.description }}</p>
-											</div>
-
-											<div class="col-md-6 img-section">
-													<img src="img/{{ fig.image }}" class="d-block w-100" alt="{{ fig.title }}">
-											</div>
-									</div>
-							</div>
-					{% endfor %}
-			</div>
-
-			<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-			</a>
-	</div>
-
-
-
-	<h3>News</h3>
-	<div class="container-fluid" >
-  	<div class="row">
-			{% for post in site.posts limit:2 %}
-			<div class="news card col-md-12 col-lg-6 shadow p-0 mb-3">
-			  <div class="row no-gutters flex-grow-1">
-			    <div class="col-md-4 pt-3">
-						{% if post.fig %}<a href="{{site.url}}{{ post.url }}">{% if post.fig contains "http" %}<img src="{{post.fig}}"{% else %}<img src="../img/{{post.fig}}"{% endif %} class="card-img"></a>{% endif %}
-			    </div>
-			    <div class="right col-md-8 p-0">
-			      <div class="card-body">
-			        <div class="card-title text-center mt-0 mb-1 mx-1"><h3 class="mt-0"><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h3></div>
-			        <div class="card-text mt-0 mb-1 mx-1">{{ post.excerpt }}</div>
-			        <div class="card-text text-right"><small class="text-muted">{{ post.date | date: "%Y.%m.%d"  }}</small></div>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-			{% endfor %}
-  	</div>
+  <header>
+    <h1>{{ site.title }}</h1>
+  </header>
+  {% endif %} {% for item in site.data.notice %} {% if item.status == "open" %}
+  <div id="notice" class="shadow-lg mb-3">
+    <div class="jumbotron">
+      <h4>{{ item.title }}</h4>
+      <p>{{ item.notice }}</p>
+      <button id="closeNotice">Close</button>
+    </div>
   </div>
 
-	<h3>Key Publications</h3>
-	<div id="publications" class="container-fluid" >
-		<ul class="row m-0">
-		{% for paper in site.data.publications %}
-		{% if paper.Important contains "es" or paper.Important contains "tr" %}
-		<li class="mb-2">
-			<div class="authors">
-				{{ paper.AuthorList | replace: "*", "<sup>*</sup>" | replace: "#", "<sup>#</sup>" }}.
-			</div>
-			<div class="title text-capitalize mb-2">
-				{{paper.Title | replace: "2+", "<sup>2+</sup>" | replace: "Na+", "Na<sup>+</sup>" | replace: "K+", "K<sup>+</sup>" | replace: "H+", "H<sup>+</sup>" | replace: "HCO3-", "HCO<sup>3-</sup>"}} {% if paper.DOI %}<a href="https://doi.org/{{paper.DOI}}">{% elsif paper.Id %}<a href="https://www.ncbi.nlm.nih.gov/pubmed/{{paper.Id}}">{% endif %}{{paper.FullJournalName}} {{paper.PubYear}}{% if paper.month contains "ress" %}<i>In Press</i>{% else %}{% if paper.Volume %};{{paper.Volume}}{% endif %}{% if paper.Issue %}({{paper.Issue}}){% endif %}{% if paper.Pages %}:{{paper.Pages}}{% endif %}.{% endif %}{% if paper.DOI or paper.Id %}</a>{% endif %}
-			</div>
-		</li>
-		{% endif %}
-		{% endfor %}
-		</ul>
-	</div>
+  <script>
+    // JavaScript to handle the close button
+    document
+      .getElementById("closeNotice")
+      .addEventListener("click", function () {
+        var notice = document.getElementById("notice");
+        notice.style.display = "none";
+      });
+  </script>
+  {% endif %} {% endfor %}
+
+  <div
+    id="carouselIndicators"
+    class="carousel slide shadow"
+    data-ride="carousel"
+  >
+    <ol class="carousel-indicators">
+      {% for fig in site.data.info.mainFig %}
+      <li
+        data-target="#carouselIndicators"
+        data-slide-to="{{ forloop.index0 }}"
+        {%
+        if
+        forloop.first
+        %}class="active"
+        {%
+        endif
+        %}
+      ></li>
+      {% endfor %}
+    </ol>
+
+    <div class="carousel-inner">
+      {% for fig in site.data.info.mainFig %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <div class="row" style="margin: 0px">
+          <div class="col-md-6 text-section">
+            <h3>{{ fig.title }}</h3>
+            <p>{{ fig.description }}</p>
+          </div>
+
+          <div class="col-md-6 img-section">
+            <img
+              src="img/{{ fig.image }}"
+              class="d-block w-100"
+              alt="{{ fig.title }}"
+            />
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <a
+      class="carousel-control-prev"
+      href="#carouselIndicators"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselIndicators"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <h3>News</h3>
+  <div class="container-fluid">
+    <div class="row">
+      {% for post in site.posts limit:2 %}
+      <div class="news card col-md-12 col-lg-6 shadow p-0 mb-3">
+        <div class="row no-gutters flex-grow-1">
+          <div class="col-md-4 pt-3">
+            {% if post.fig %}<a href="{{site.url}}{{ post.url }}"
+              >{% if post.fig contains "http" %}<img
+                src="{{post.fig}}"
+                {%
+                else
+                %}<img
+                src="../img/{{post.fig}}"
+                {%
+                endif
+                %}
+                class="card-img" /></a
+            >{% endif %}
+          </div>
+          <div class="right col-md-8 p-0">
+            <div class="card-body">
+              <div class="card-title text-center mt-0 mb-1 mx-1">
+                <h3 class="mt-0">
+                  <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
+                </h3>
+              </div>
+              <div class="card-text mt-0 mb-1 mx-1">{{ post.excerpt }}</div>
+              <div class="card-text text-right">
+                <small class="text-muted"
+                  >{{ post.date | date: "%Y.%m.%d" }}</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <h3>Key Publications</h3>
+  <div id="publications" class="container-fluid">
+	<ul class="card-body">
+  	{% for paper in site.data.publications %}
+		{% if paper.Important contains
+      "es" or paper.Important contains "tr" %}
+      <li class="mb-2">
+        <div>
+          <strong><big><a style="color: black; margin-top: 50px;" href="{{ paper.Link }}">{{ paper.Title }}</a></big></strong>
+        </div>
+        <div style="margin-left: 10px; margin-top: 0px;">
+          {{paper.Authors}}
+        </div>
+        {% if paper.Journal %}
+        <div style="margin-left: 10px; margin-top: 0px;">
+          {{ paper.Journal }}, {{ paper.Year }}
+        </div>
+        {% endif %}
+        {% if paper.Conference %}
+        <div style="margin-left: 10px; margin-top: 0px;">
+          {{ paper.Conference }}, {{ paper.Year }}
+        </div>
+        {% endif %}
+      </li>
+  	{% endif %}
+  	{% endfor %}
+  </div>
 </div>
