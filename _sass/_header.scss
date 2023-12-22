@@ -1,11 +1,11 @@
-$header-height: 45px;
+$header-height: 50px;
 
 .navbar {
   height: $header-height;
   min-height: $header-height;
 
   border: 0px solid transparent;
-  border-bottom: 1px solid;
+  border-bottom: 4px solid;
   border-color: #dee2e6;
   font-size: 14px;
 
@@ -29,10 +29,7 @@ $header-height: 45px;
   .navbar-brand {
     display: inline;
     .logo {
-      height: $header-height - 6;
-    }
-    .logo2 {
-      height: $header-height - 6;
+      height: $header-height - 10;
     }
     .navbar-btn {
       margin: 3px 0;
@@ -177,9 +174,6 @@ $header-height: 45px;
     margin-top: -1 * $navbar-height;
   }
   .logo {
-    display: none;
-  }
-  .logo2 {
     display: none;
   }
   .alert {

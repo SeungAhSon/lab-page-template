@@ -1,44 +1,64 @@
-- title: Orofacial Nociception 1 # 연구실 방향 큰 제목
-  subtitle: 부제목이 필요하다면 여기에 입력 # 필요시 입력
-  abstract: > # 다음 줄에 연구실의 연구 방향 개략적 소개
-    상아모세포는 치수강 가장 바깥층에서 상아질을 형성하는 것이 주 기능인 세포이다.
-    이러한 상아모세포의 위치와 형태가 치아 관련 세포군 중 외부 환경을 가장 먼저 접하게 되므로 상아모세포가 감각세포나 면역세포로서도 기능할 수 있다는 가능성이 꾸준히 대두되고, 이를 지지하는 증거들이 계속 보고되고 있다.
-    본 연구실에서는 치통 및 치아생리와 관련한 상아모세포의 기능을 밝히고자 단일 상아모세포의 전사체 분석을 진행중이다.
-  keywords: 상아모세포, 치통, ATP
-  icon: research/icon/dna.png
-  fig: research/Odontoblast_ATP.png
-  fig_src: J Dent Res. 2017;96(2):200-207. # 그림의 출처를 밝힐 필요가 있는 경우 여기에 입력
-  link: http://www.ncbi.nlm.nih.gov/pubmed/23955160
-
-- title: Orofacial Nociception 2 # 연구실 방향 큰 제목
-  abstract: > # 다음 줄에 연구실의 연구 방향 개략적 소개
-    상아모세포는 치수강 가장 바깥층에서 상아질을 형성하는 것이 주 기능인 세포이다.
-    이러한 상아모세포의 위치와 형태가 치아 관련 세포군 중 외부 환경을 가장 먼저 접하게 되므로 상아모세포가 감각세포나 면역세포로서도 기능할 수 있다는 가능성이 꾸준히 대두되고, 이를 지지하는 증거들이 계속 보고되고 있다.
-    본 연구실에서는 치통 및 치아생리와 관련한 상아모세포의 기능을 밝히고자 단일 상아모세포의 전사체 분석을 진행중이다.
+- title: Multi-agent Reinforcement Learning Algorithm Applicable to Changing Environments
+  subtitle:
+  abstract:
   keywords:
   icon:
-  fig: research/Odontoblast_ATP.png
-  fig_src: J Dent Res. 2017;96(2):200-207.
-  link: http://www.ncbi.nlm.nih.gov/pubmed/23955160
-
-- title: Orofacial Nociception 3 # 연구실 방향 큰 제목
-  abstract: > # 다음 줄에 연구실의 연구 방향 개략적 소개
-    상아모세포는 치수강 가장 바깥층에서 상아질을 형성하는 것이 주 기능인 세포이다.
-    이러한 상아모세포의 위치와 형태가 치아 관련 세포군 중 외부 환경을 가장 먼저 접하게 되므로 상아모세포가 감각세포나 면역세포로서도 기능할 수 있다는 가능성이 꾸준히 대두되고, 이를 지지하는 증거들이 계속 보고되고 있다.
-    본 연구실에서는 치통 및 치아생리와 관련한 상아모세포의 기능을 밝히고자 단일 상아모세포의 전사체 분석을 진행중이다.
-  keywords:
-  icon:
-  fig: research/Odontoblast_ATP.png
+  fig: research/slide2.PNG
   fig_src:
-  link: http://www.ncbi.nlm.nih.gov/pubmed/23955160
+  link:
 
-- title: Orofacial Nociception 4 # 연구실 방향 큰 제목
-  abstract: > # 다음 줄에 연구실의 연구 방향 개략적 소개
-    상아모세포는 치수강 가장 바깥층에서 상아질을 형성하는 것이 주 기능인 세포이다.
-    이러한 상아모세포의 위치와 형태가 치아 관련 세포군 중 외부 환경을 가장 먼저 접하게 되므로 상아모세포가 감각세포나 면역세포로서도 기능할 수 있다는 가능성이 꾸준히 대두되고, 이를 지지하는 증거들이 계속 보고되고 있다.
-    본 연구실에서는 치통 및 치아생리와 관련한 상아모세포의 기능을 밝히고자 단일 상아모세포의 전사체 분석을 진행중이다.
+- title:
+  abstract:
   keywords:
   icon:
-  fig:
-  fig_src: J Dent Res. 2013 Nov;92(11):948-55.
-  link: http://www.ncbi.nlm.nih.gov/pubmed/23955160
+  fig: research/slide3.png
+  fig_src:
+  link:
+
+- title:
+  abstract:
+  keywords:
+  icon:
+  fig: research/slide4.png
+  fig_src:
+  link:
+
+- title:
+  abstract:
+  keywords:
+  icon:
+  fig: research/slide5.png
+  fig_src:
+  link:
+
+- title:
+  abstract:
+  keywords:
+  icon:
+  fig: research/slide6.png
+  fig_src:
+  link:
+
+- title:
+  abstract:
+  keywords:
+  icon:
+  fig: research/slide7.png
+  fig_src:
+  link:
+
+- title:
+  abstract:
+  keywords:
+  icon:
+  fig: research/slide8.png
+  fig_src:
+  link:
+
+- title:
+  abstract:
+  keywords:
+  icon:
+  fig: research/slide9.png
+  fig_src:
+  link:

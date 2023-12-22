@@ -1,12 +1,12 @@
 mainFig:
-  - title: "Item 1"
-    description: "이 연구실은 아주 좋은 연구실 입니다."
+  - title: "Welcome to our Lab!"
+    description: Vehicular<br/> Intelligence<br/> Lab
     image: "info/frontImg_1.jpg"
-  - title: "Item 2"
-    description: "Description for Item 2."
+  - title: "Welcome to our Lab!"
+    description: Vehicular<br/> Intelligence<br/> Lab
     image: "info/frontImg_2.jpg"
-  - title: "Item 3"
-    description: "Description for Item 3."
+  - title: "Welcome to our Lab!"
+    description: Vehicular<br/> Intelligence<br/> Lab
     image: "info/frontImg_3.jpg"
 
 introduction: |
