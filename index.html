@@ -53,9 +53,8 @@ layout: default
       {% for fig in site.data.info.mainFig %}
       <div class="carousel-item {% if forloop.first %}active{% endif %}">
         <div class="row" style="margin: 0px">
-          <div class="col-md-6 text-section">
-            <h3>{{ fig.title }}</h3>
-            <p>{{ fig.description }}</p>
+          <div class="col-md-6 text-section" style="background-image: url('img/info/hello.jpg');background-size: cover; background-position: center">
+
           </div>
 
           <div class="col-md-6 img-section">
@@ -92,10 +91,9 @@ layout: default
 
   <h3>Recent Publications</h3>
   <div id="publications" class="container-fluid">
-	<ul class="card-body" style="padding:1rem; margin-left: 20px;">
-  	{% for paper in site.data.publications %}
-		{% if paper.Important contains
-      "es" or paper.Important contains "tr" %}
+   <ul class="card-body" style="padding:1rem; margin-left: 20px;">
+    {% assign count = 0 %}
+     {% for paper in site.data.publications %}
       <li class="mb-2">
         <div>
           <strong><big><a style="color: black; margin-top: 50px;" href="{{ paper.Link }}">{{ paper.Title }}</a></big></strong>
@@ -114,7 +112,10 @@ layout: default
         </div>
         {% endif %}
       </li>
-  	{% endif %}
-  	{% endfor %}
+    {% assign count = count | plus: 1 %}
+    {% if count == 3 %}
+      {% break %}
+    {% endif %}
+     {% endfor %}
   </div>
 </div>
