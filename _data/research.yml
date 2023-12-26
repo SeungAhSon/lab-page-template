@@ -1,64 +1,23 @@
-- title: 2
-  subtitle:
-  abstract:
-  keywords:
-  icon:
-  fig: research/slide2.PNG
-  fig_src:
-  link:
+- subject: AI
+  fig: research/2.png
 
-- title: 3
-  abstract:
-  keywords:
-  icon:
-  fig: research/slide3.PNG
-  fig_src:
-  link:
+- subject: AI
+  fig: research/3.png
 
-- title: 4
-  abstract:
-  keywords:
-  icon:
-  fig: research/slide4.PNG
-  fig_src:
-  link:
+- subject: AI
+  fig: research/4.png
 
-- title: 5
-  abstract:
-  keywords:
-  icon:
-  fig: research/slide5.PNG
-  fig_src:
-  link:
+- subject: AI
+  fig: research/5.png
 
-- title: 6
-  abstract:
-  keywords:
-  icon:
-  fig: research/slide6.PNG
-  fig_src:
-  link:
+- subject: AI
+  fig: research/6.png
 
-- title: 7
-  abstract:
-  keywords:
-  icon:
-  fig: research/slide7.PNG
-  fig_src:
-  link:
+- subject: Energy
+  fig: research/10.png
 
-- title: 8
-  abstract:
-  keywords:
-  icon:
-  fig: research/slide8.PNG
-  fig_src:
-  link:
+- subject: Energy
+  fig: research/11.png
 
-- title: 9
-  abstract:
-  keywords:
-  icon:
-  fig: research/slide9.PNG
-  fig_src:
-  link:
+- subject: Energy
+  fig: research/12.png
