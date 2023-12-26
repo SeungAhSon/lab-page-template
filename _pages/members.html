@@ -47,6 +47,12 @@
             alt="Google Scholar"
             style="width: 24px; height: 24px"
           />
+          {% endif %} {% if person.web %}
+          <i
+            class="fas fa-home"
+            onclick="window.open('{{ person.web }}');"
+            style="font-size: 20px; color: #3669c3; vertical-align: middle"
+          ></i>
           {% endif %}
         </div>
       </div>
