@@ -31,6 +31,7 @@ layout: default
     id="carouselIndicators"
     class="carousel slide shadow"
     data-ride="carousel"
+    style="margin-bottom:20px"
   >
     <ol class="carousel-indicators">
       {% for fig in site.data.info.mainFig %}
@@ -89,9 +90,9 @@ layout: default
     </a>
   </div>
 
-  <h3>Key Publications</h3>
+  <h3>Recent Publications</h3>
   <div id="publications" class="container-fluid">
-	<ul class="card-body">
+	<ul class="card-body" style="padding:1rem;">
   	{% for paper in site.data.publications %}
 		{% if paper.Important contains
       "es" or paper.Important contains "tr" %}
@@ -99,16 +100,16 @@ layout: default
         <div>
           <strong><big><a style="color: black; margin-top: 50px;" href="{{ paper.Link }}">{{ paper.Title }}</a></big></strong>
         </div>
-        <div style="margin-left: 10px; margin-top: 0px;">
+        <div style="margin-left: 0px; margin-top: 0px;">
           {{paper.Authors}}
         </div>
         {% if paper.Journal %}
-        <div style="margin-left: 10px; margin-top: 0px;">
+        <div style="margin-left: 0px; margin-top: 0px;">
           {{ paper.Journal }}, {{ paper.Year }}
         </div>
         {% endif %}
         {% if paper.Conference %}
-        <div style="margin-left: 10px; margin-top: 0px;">
+        <div style="margin-left: 0px; margin-top: 0px;">
           {{ paper.Conference }}, {{ paper.Year }}
         </div>
         {% endif %}

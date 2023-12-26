@@ -1,9 +1,13 @@
 {% assign totalItems = img_data | size %} {% assign itemsPerColumn = totalItems
 | divided_by: 3 %} {% assign remainder = totalItems | modulo: 3 %} {% assign
-column1 = img_data | slice: 0, itemsPerColumn %} {% assign column2 = img_data |
-slice: itemsPerColumn, itemsPerColumn %} {% assign column3_start =
-itemsPerColumn | times: 2 %} {% assign column3_end = itemsPerColumn | sum:
-remainder %} {% assign column3 = img_data | slice: column3_start, column3_end %}
+column1_end = itemsPerColumn %} {% assign column2_end = itemsPerColumn %} {%
+assign column3_end = itemsPerColumn %} {% if remainder==1 %} {% assign
+column1_end = itemsPerColumn | sum | plus: 1 %} {% elsif remainder==2 %} {%
+assign column1_end = itemsPerColumn | sum | plus: 1 %} {% assign column2_end =
+itemsPerColumn | sum | plus: 1 %} {% endif %} {% assign column1 = img_data |
+slice: 0, column1_end %} {% assign column2 = img_data | slice: column1_end,
+column2_end %} {% assign column3_start = column1_end | sum | plus: column2_end
+%} {% assign column3 = img_data | slice: column3_start, column3_end %}
 
 <div class="row">
   <div
