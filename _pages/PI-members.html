@@ -1,11 +1,12 @@
 <div style="padding: 20px">
   <div class="row no-gutters person">
-    <div class="portrait">
+    <div class="portrait" id="portraitDiv" onclick="changePortrait()">
       <img
         src="{{site.url}}/img/{{ person.portrait}}"
         class="card-img"
         alt="..."
         style="border-radius: 100px; outline: 1px solid lightgray"
+        id="portraitImage"
       />
     </div>
     <div class="card-body">
@@ -35,7 +36,7 @@
         alt="Google Scholar"
         style="width: 24px; height: 24px"
       />
-      <div class="card-text" style="margin-top: 5px">
+      <div class="card-text">
         <hr />
         <p style="margin-bottom: 1px; display: block">
           <strong>Bio:</strong> {{ person.bio | newline_to_br | markdownify }}
@@ -77,28 +78,47 @@
     <h5 class="card-header">Publications</h5>
     <ul class="card-body">
       {% for paper in site.data.publications %}
-      <div style="margin-bottom: 10px">
-        <div>
-          <strong
-            ><big
-              ><a style="color: black" href="{{ paper.Link }}"
-                >{{ paper.Title }}</a
-              ></big
-            ></strong
-          >
+        <div style="margin-bottom: 10px">
+          <div>
+            <strong><big><a style="color: black" href="{{ paper.Link }}">{{ paper.Title }}</a></big></strong>
+          </div>
+          <div style="margin-left: 10px; margin-top: 0px">{{paper.Authors}}</div>
+          {% if paper.Journal %}
+            <div style="margin-left: 10px; margin-top: 0px">{{ paper.Journal }}, {{ paper.Year }}</div>
+          {% endif %}
+          {% if paper.Conference %}
+            <div style="margin-left: 10px; margin-top: 0px">{{ paper.Conference }}, {{ paper.Year }}</div>
+          {% endif %}
         </div>
-        <div style="margin-left: 10px; margin-top: 0px">{{paper.Authors}}</div>
-        {% if paper.Journal %}
-        <div style="margin-left: 10px; margin-top: 0px">
-          {{ paper.Journal }}, {{ paper.Year }}
-        </div>
-        {% endif %} {% if paper.Conference %}
-        <div style="margin-left: 10px; margin-top: 0px">
-          {{ paper.Conference }}, {{ paper.Year }}
-        </div>
-        {% endif %}
-      </div>
       {% endfor %}
     </ul>
   </div>
+
+  <script>
+    var portraitIndex = 1;
+    var portraits = [
+      "{{ person.portrait }}",
+      "/ppl/vil2.png",
+    ];
+
+    var clickCounter = 0;
+
+    function changePortrait() {
+      clickCounter++;
+
+      if (clickCounter === 50) {
+        clickCounter = 0;
+
+        var portraitImage = document.getElementById('portraitImage');
+        portraitIndex = (portraitIndex % portraits.length) + 1;
+        portraitImage.src = "{{site.url}}/img/" + portraits[portraitIndex - 1];
+      } else if (clickCounter === 1) {
+        setTimeout(function () {
+          clickCounter = 0;
+        }, 10000);
+      }
+    }
+  </script>
+
+
 </div>
