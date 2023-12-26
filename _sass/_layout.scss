@@ -131,26 +131,6 @@
   }
 }
 
-#news {
-  .card-header {
-    min-height: 5em;
-  }
-  .card-img-top {
-    max-width: 200px;
-    display: block;
-    margin: 0 auto 1em;
-  }
-  .card-link {
-    color: inherit; /* Use the default text color */
-    text-decoration: none; /* Remove underlines */
-  }
-
-  .card-link:hover {
-    color: inherit; /* Use the default text color on hover */
-    text-decoration: none; /* Remove underlines on hover */
-  }
-}
-
 #content {
   padding: 0 0 1em 0;
   h1 {
@@ -360,23 +340,6 @@
     @media screen and (max-width: 480px) {
       padding-right: 5px;
       padding-left: 5px;
-    }
-  }
-  .news {
-    .card-img {
-      max-width: 300px;
-      display: block;
-      margin: 0 auto 1em;
-    }
-    .right {
-      height: 100%;
-      font-size: 1em;
-      background-color: #f0f0f0;
-      .card-text {
-        h1 {
-          font-size: 1.2em;
-        }
-      }
     }
   }
   #publications {
@@ -733,5 +696,38 @@
   a[href]:after {
     /* to stop printing anchor destinations in print mode */
     content: "";
+  }
+}
+
+
+.photos {
+  .row {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    min-width: 320px;
+    min-height: 9.1em;
+    height: 100%;
+
+    .col-md-4,
+    .col-lg-4,
+    .col-xl-4 {
+      padding: 0;
+      margin: 0;
+      flex: 0 0 calc(33.33% - 0.5rem);
+    }
+
+    .card {
+      margin-bottom: 0;
+    }
+
+    .card-img {
+      width: 100%; // Make sure the image takes 100% of the card width
+      height: auto; // Maintain the aspect ratio
+    }
+
+    .w-100 {
+      width: 100%; // Ensure a new row takes the full width
+    }
   }
 }

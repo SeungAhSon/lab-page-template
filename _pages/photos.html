@@ -1,0 +1,41 @@
+{% assign totalItems = img_data | size %} {% assign itemsPerColumn = totalItems
+| divided_by: 3 %} {% assign remainder = totalItems | modulo: 3 %} {% assign
+column1 = img_data | slice: 0, itemsPerColumn %} {% assign column2 = img_data |
+slice: itemsPerColumn, itemsPerColumn %} {% assign column3_start =
+itemsPerColumn | times: 2 %} {% assign column3_end = itemsPerColumn | sum:
+remainder %} {% assign column3 = img_data | slice: column3_start, column3_end %}
+
+<div class="row">
+  <div
+    class="col-md-4 col-lg-4 col-xl-4"
+    style="padding: 0; margin: 0; flex: 0 0 calc(33.33% - 0.5rem)"
+  >
+    {% for photo1 in column1 %}
+    <div class="card">
+      <img src="{{ site.url }}{{ photo1 }}" class="card-img" alt="..." />
+    </div>
+    {% endfor %}
+  </div>
+
+  <div
+    class="col-md-4 col-lg-4 col-xl-4"
+    style="padding: 0; margin: 0; flex: 0 0 calc(33.33% - 0.5rem)"
+  >
+    {% for photo2 in column2 %}
+    <div class="card">
+      <img src="{{ site.url }}{{ photo2 }}" class="card-img" alt="..." />
+    </div>
+    {% endfor %}
+  </div>
+
+  <div
+    class="col-md-4 col-lg-4 col-xl-4"
+    style="padding: 0; margin: 0; flex: 0 0 calc(33.33% - 0.5rem)"
+  >
+    {% for photo3 in column3 %}
+    <div class="card">
+      <img src="{{ site.url }}{{ photo3 }}" class="card-img" alt="..." />
+    </div>
+    {% endfor %}
+  </div>
+</div>
