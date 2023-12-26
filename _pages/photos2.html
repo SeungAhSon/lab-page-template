@@ -1,0 +1,53 @@
+{% assign itemsPerColumn = totalItems | divided_by: 3 %}
+{% assign remainder = totalItems | modulo: 3 %}
+{% assign itemsPerColumn = itemsPerColumn | minus: 1 %}
+{% assign column1_len = itemsPerColumn %}
+{% assign column2_len = itemsPerColumn %}
+{% assign column3_len = itemsPerColumn %}
+{% if remainder==1 %}
+{% assign column1_len = itemsPerColumn | sum | plus: 1 %}
+{% elsif remainder==2 %}
+{% assign column1_len = itemsPerColumn | sum | plus: 1 %}
+{% assign column2_len = itemsPerColumn | sum | plus: 1 %}
+{% endif %}
+{% assign column1_start = 1 %}
+{% assign column1_end = column1_start | sum | plus: column1_len %}
+{% assign column2_start = column1_end | sum | plus: 1 %}
+{% assign column2_end = column2_start | sum | plus: column2_len %}
+{% assign column3_start = column2_end | sum | plus: 1 %}
+{% assign column3_end = column3_start | sum | plus: column3_len %}
+
+<div class="row">
+  <div
+    class="col-md-4 col-lg-4 col-xl-4"
+    style="padding: 0; margin: 0; flex: 0 0 calc(33.33% - 0.5rem)"
+  >
+    {% for i in (column1_start..column1_end) %}
+    <div class="card">
+      <img src="{{ site.url }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
+    </div>
+    {% endfor %}
+  </div>
+
+  <div
+    class="col-md-4 col-lg-4 col-xl-4"
+    style="padding: 0; margin: 0; flex: 0 0 calc(33.33% - 0.5rem)"
+  >
+    {% for i in (column2_start..column2_end) %}
+    <div class="card">
+      <img src="{{ site.url }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
+    </div>
+    {% endfor %}
+  </div>
+
+  <div
+    class="col-md-4 col-lg-4 col-xl-4"
+    style="padding: 0; margin: 0; flex: 0 0 calc(33.33% - 0.5rem)"
+  >
+    {% for i in (column3_start..column3_end) %}
+    <div class="card">
+      <img src="{{ site.url }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
+    </div>
+    {% endfor %}
+  </div>
+</div>
