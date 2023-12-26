@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
 
 <body lang="{% if page.language %}{{ page.language }}{% else %}ko{% endif %}" dir="ltr">
   {% include header.html %}
@@ -20,5 +44,26 @@
   <script type="text/javascript" src="{{ "/js/photoswipe.min.js" | prepend: site.baseurl }}"></script>
 -->
 
+  <button id="topBtn" onclick="goToTop()">Top</button>
+
+  <script>
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      var topBtn = document.getElementById("topBtn");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    }
+
+    function goToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 </html>
