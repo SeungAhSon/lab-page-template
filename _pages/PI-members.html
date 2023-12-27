@@ -78,28 +78,38 @@
     <h5 class="card-header">Publications</h5>
     <ul class="card-body">
       {% for paper in site.data.publications %}
-        <div style="margin-bottom: 10px">
-          <div>
-            <strong><big><a style="color: black" href="{{ paper.Link }}">{{ paper.Title }}</a></big></strong>
-          </div>
-          <div style="margin-left: 10px; margin-top: 0px">{{paper.Authors}}</div>
-          {% if paper.Journal %}
-            <div style="margin-left: 10px; margin-top: 0px">{{ paper.Journal }}, {{ paper.Year }}</div>
-          {% endif %}
-          {% if paper.Conference %}
-            <div style="margin-left: 10px; margin-top: 0px">{{ paper.Conference }}, {{ paper.Year }}</div>
-          {% endif %}
+      <div style="margin-bottom: 10px">
+        <div>
+          <strong
+            ><big
+              ><a style="color: black" href="{{ paper.Link }}"
+                >{{ paper.Title }}</a
+              ></big
+            ></strong
+          >
         </div>
+        <div style="margin-left: 10px; margin-top: 0px">{{paper.Authors}}</div>
+        {% if paper.Journal %}
+        <div style="margin-left: 10px; margin-top: 0px">
+          {{ paper.Journal }}, {{ paper.Year }}
+        </div>
+        {% endif %} {% if paper.Conference %}
+        <div style="margin-left: 10px; margin-top: 0px">
+          {{ paper.Conference }}, {{ paper.Year }}
+        </div>
+        {% endif %} {% if paper.Patent %}
+        <div style="margin-left: 10px; margin-top: 0px">
+          {{ paper.Patent }}, {{ paper.Year }}
+        </div>
+        {% endif %}
+      </div>
       {% endfor %}
     </ul>
   </div>
 
   <script>
     var portraitIndex = 1;
-    var portraits = [
-      "{{ person.portrait }}",
-      "/ppl/vil2.png",
-    ];
+    var portraits = ["{{ person.portrait }}", "/ppl/vil2.png"];
 
     var clickCounter = 0;
 
@@ -109,7 +119,7 @@
       if (clickCounter === 50) {
         clickCounter = 0;
 
-        var portraitImage = document.getElementById('portraitImage');
+        var portraitImage = document.getElementById("portraitImage");
         portraitIndex = (portraitIndex % portraits.length) + 1;
         portraitImage.src = "{{site.url}}/img/" + portraits[portraitIndex - 1];
       } else if (clickCounter === 1) {
@@ -119,6 +129,4 @@
       }
     }
   </script>
-
-
 </div>
