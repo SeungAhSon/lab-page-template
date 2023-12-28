@@ -2,6 +2,51 @@
 layout: default
 ---
 
+<style>
+  .container-fluid {
+    overflow: hidden;
+  }
+
+  .photo-gallery {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollLeft 30s linear infinite;
+  }
+
+  .photo-gallery img {
+    max-width: 100px;
+    margin-right: 10px;
+    height: 75px;
+  }
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const photoGallery = document.querySelector(".photo-gallery");
+    const images = photoGallery.querySelectorAll("img");
+
+    // 이미지 복사 함수
+    function duplicateImages() {
+      images.forEach((img) => {
+        const clone = img.cloneNode(true);
+        photoGallery.appendChild(clone);
+      });
+    }
+
+    duplicateImages();
+  });
+</script>
+
 <div id="home">
   {% if site.show_header %}
   <header>
@@ -17,7 +62,6 @@ layout: default
   </div>
 
   <script>
-    // JavaScript to handle the close button
     document
       .getElementById("closeNotice")
       .addEventListener("click", function () {
@@ -54,16 +98,17 @@ layout: default
       <div class="carousel-item {% if forloop.first %}active{% endif %}">
         <div class="row" style="margin: 0px">
           <div style="display: flex;flex-direction: row;">
-          <img
+            <img
               src="img/info/hello.jpg"
               class="d-block w-50"
               alt="{{ fig.title }}"
             />
-          <img
+            <img
               src="img/{{ fig.image }}"
               class="d-block w-50"
               alt="{{ fig.title }}"
-            /></div>
+            />
+          </div>
         </div>
       </div>
       {% endfor %}
@@ -88,14 +133,12 @@ layout: default
       <span class="sr-only">Next</span>
     </a>
   </div>
-  
-
 
   <h3>Recent Publications</h3>
   <div id="publications" class="container-fluid">
-   <ul class="card-body" style="padding:1rem; margin-left: 20px;">
-    {% assign count = 0 %}
-     {% for paper in site.data.publications %}
+    <ul class="card-body" style="padding:1rem; margin-left: 20px;">
+      {% assign count = 0 %}
+      {% for paper in site.data.publications %}
       <li class="mb-2">
         <div>
           <strong><big><a style="color: black; margin-top: 50px;" href="{{ paper.Link }}">{{ paper.Title }}</a></big></strong>
@@ -114,25 +157,19 @@ layout: default
         </div>
         {% endif %}
       </li>
-    {% assign count = count | plus: 1 %}
-    {% if count == 3 %}
+      {% assign count = count | plus: 1 %}
+      {% if count == 3 %}
       {% break %}
-    {% endif %}
-     {% endfor %}
+      {% endif %}
+      {% endfor %}
+    </div>
+    <h3>Recent Photos</h3>
+    <div class="container-fluid" style="padding: 0em; overflow: hidden; margin-bottom: 20px;">
+      <a href="{{site.url}}/photos" class="photo-gallery">
+        {% for i in (1..16) %}
+          <img src="./img/photos/2023/({{i}}).jpg" alt="Image {{i}}">
+        {% endfor %}
+      </a>
+    </div>
   </div>
-  <h3>Recent Photos</h3>
-    <a style="display: flex; width:100%; align-items: center; margin-left: 10px; overflow:hidden;" href="{{site.url}}/photos">
-      <img src="./img/photos/2023/(1).jpg" alt="Image 1" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(2).jpg" alt="Image 2" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(3).jpg" alt="Image 3" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(4).jpg" alt="Image 4" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(5).jpg" alt="Image 5" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(6).jpg" alt="Image 6" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(7).jpg" alt="Image 7" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(8).jpg" alt="Image 8" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(9).jpg" alt="Image 9" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(10).jpg" alt="Image 10" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(11).jpg" alt="Image 11" style="max-width: 100px; margin-right: 10px; height:75px">
-      <img src="./img/photos/2023/(12).jpg" alt="Image 12" style="max-width: 100px; margin-right: 10px; height:75px">
-    </a>
 </div>
