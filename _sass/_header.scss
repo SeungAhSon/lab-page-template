@@ -30,6 +30,8 @@ $header-height: 50px;
     display: inline;
     .logo {
       height: $header-height - 10;
+      max-height: $header-height - 10;
+      object-fit: contain;
     }
     .navbar-btn {
       margin: 3px 0;
@@ -92,7 +94,7 @@ $header-height: 50px;
       z-index: 101;
       .navbar-brand-wrapper {
         margin: auto;
-        padding-left: $navbar-height;
+        padding-left: calc($navbar-height/2);
         a {
           margin: auto;
         }

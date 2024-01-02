@@ -28,7 +28,7 @@
 
 <body lang="{% if page.language %}{{ page.language }}{% else %}ko{% endif %}" dir="ltr">
   {% include header.html %}
-	<div id="outbox" class="container">
+	<div id="outbox" class="container" style="max-width: none; width: 100%">
 		<div id="pagebox">
 			{{ content }}
 		</div>

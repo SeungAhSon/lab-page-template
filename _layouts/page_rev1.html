@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<article class="post">
+	<div style="position: relative; max-height: 200px; overflow: hidden;">
+	  <img src="../img/default/Banner2.png" style="width: 100%; object-fit: cover;">
+	  <div class="post-header" style="position: absolute; bottom: 25px; left: 30px; right: 10px; padding: 10px;">
+	    <h6 class="post-title" style="margin: 0; color: #fff; font-weight: bold; font-size: 26px;">
+	      {{ page.title }}
+	    </h6>
+	  </div>
+	  <div class="post-header" style="height: 37px; position: absolute; bottom: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.8); padding: 10px;">
+	  </div>
+	</div>
+
+	<div class="post-content" style="{% unless page.title == 'Info' or page.title == 'Research' %} margin-top: -37px; {% endunless %}; position: relative;">
+		{{ content }}
+	</div>
+</article>
