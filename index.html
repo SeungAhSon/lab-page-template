@@ -47,127 +47,160 @@ layout: default
   });
 </script>
 
-<div id="home">
-  {% if site.show_header %}
-  <header>
-    <h1>{{ site.title }}</h1>
-  </header>
-  {% endif %} {% for item in site.data.notice %} {% if item.status == "open" %}
-  <div id="notice" class="shadow-lg mb-3">
-    <div class="jumbotron">
-      <h4>{{ item.title }}</h4>
-      <p>{{ item.notice }}</p>
-      <button id="closeNotice">Close</button>
-    </div>
-  </div>
-
-  <script>
-    document
-      .getElementById("closeNotice")
-      .addEventListener("click", function () {
-        var notice = document.getElementById("notice");
-        notice.style.display = "none";
-      });
-  </script>
-  {% endif %} {% endfor %}
-
+<div>
   <div
-    id="carouselIndicators"
-    class="carousel slide shadow"
-    data-ride="carousel"
-    style="margin-bottom:20px"
+    style="
+      position: relative;
+      max-height: 200px;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-top: -10px;
+    "
   >
-    <ol class="carousel-indicators">
-      {% for fig in site.data.info.mainFig %}
-      <li
-        data-target="#carouselIndicators"
-        data-slide-to="{{ forloop.index0 }}"
-        {%
-        if
-        forloop.first
-        %}class="active"
-        {%
-        endif
-        %}
-      ></li>
-      {% endfor %}
-    </ol>
+    <img
+      src="../img/default/Banner2.png"
+      style="width: 100%; object-fit: cover"
+    />
+    <div
+      class="post-header"
+      style="
+        height: 37px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+      "
+    ></div>
+  </div>
+  <div id="home" style="max-width: 1170px; margin: 0 auto">
+    {% if site.show_header %}
+    <header>
+      <h1>{{ site.title }}</h1>
+    </header>
+    {% endif %} {% for item in site.data.notice %} {% if item.status == "open"
+    %}
+    <div id="notice" class="shadow-lg mb-3">
+      <div class="jumbotron">
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.notice }}</p>
+        <button id="closeNotice">Close</button>
+      </div>
+    </div>
 
-    <div class="carousel-inner">
-      {% for fig in site.data.info.mainFig %}
-      <div class="carousel-item {% if forloop.first %}active{% endif %}">
-        <div class="row" style="margin: 0px">
-          <div style="display: flex;flex-direction: row;">
-            <img
-              src="img/info/hello.jpg"
-              class="d-block w-50"
-              alt="{{ fig.title }}"
-            />
-            <img
-              src="img/{{ fig.image }}"
-              class="d-block w-50"
-              alt="{{ fig.title }}"
-            />
+    <script>
+      document
+        .getElementById("closeNotice")
+        .addEventListener("click", function () {
+          var notice = document.getElementById("notice");
+          notice.style.display = "none";
+        });
+    </script>
+    {% endif %} {% endfor %}
+
+    <div
+      id="carouselIndicators"
+      class="carousel slide shadow"
+      data-ride="carousel"
+      style="margin-bottom: 20px"
+    >
+      <ol class="carousel-indicators">
+        {% for fig in site.data.info.mainFig %}
+        <li
+          data-target="#carouselIndicators"
+          data-slide-to="{{ forloop.index0 }}"
+          {%
+          if
+          forloop.first
+          %}class="active"
+          {%
+          endif
+          %}
+        ></li>
+        {% endfor %}
+      </ol>
+
+      <div class="carousel-inner">
+        {% for fig in site.data.info.mainFig %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="row" style="margin: 0px">
+            <div style="display: flex; flex-direction: row">
+              <img
+                src="img/info/hello.jpg"
+                class="d-block w-50"
+                alt="{{ fig.title }}"
+              />
+              <img
+                src="img/{{ fig.image }}"
+                class="d-block w-50"
+                alt="{{ fig.title }}"
+              />
+            </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
+
+      <a
+        class="carousel-control-prev"
+        href="#carouselIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
-    <a
-      class="carousel-control-prev"
-      href="#carouselIndicators"
-      role="button"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a
-      class="carousel-control-next"
-      href="#carouselIndicators"
-      role="button"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-  <h3>Recent Publications</h3>
-  <div id="publications" class="container-fluid">
-    <ul class="card-body" style="padding:1rem; margin-left: 20px;">
-      {% assign count = 0 %}
-      {% for paper in site.data.publications %}
-      <li class="mb-2">
-        <div>
-          <strong><big><a style="color: black; margin-top: 50px;" href="{{ paper.Link }}">{{ paper.Title }}</a></big></strong>
-        </div>
-        <div style="margin-left: 0px; margin-top: 0px;">
-          {{paper.Authors}}
-        </div>
-        {% if paper.Journal %}
-        <div style="margin-left: 0px; margin-top: 0px;">
-          {{ paper.Journal }}, {{ paper.Year }}
-        </div>
-        {% endif %}
-        {% if paper.Conference %}
-        <div style="margin-left: 0px; margin-top: 0px;">
-          {{ paper.Conference }}, {{ paper.Year }}
-        </div>
-        {% endif %}
-      </li>
-      {% assign count = count | plus: 1 %}
-      {% if count == 3 %}
-      {% break %}
-      {% endif %}
-      {% endfor %}
+    <h3>Recent Publications</h3>
+    <div id="publications" class="container-fluid">
+      <ul class="card-body" style="padding: 1rem; margin-left: 20px">
+        {% assign count = 0 %} {% for paper in site.data.publications %}
+        <li class="mb-2">
+          <div>
+            <strong
+              ><big
+                ><a
+                  style="color: black; margin-top: 50px"
+                  href="{{ paper.Link }}"
+                  >{{ paper.Title }}</a
+                ></big
+              ></strong
+            >
+          </div>
+          <div style="margin-left: 0px; margin-top: 0px">{{paper.Authors}}</div>
+          {% if paper.Journal %}
+          <div style="margin-left: 0px; margin-top: 0px">
+            {{ paper.Journal }}, {{ paper.Year }}
+          </div>
+          {% endif %} {% if paper.Conference %}
+          <div style="margin-left: 0px; margin-top: 0px">
+            {{ paper.Conference }}, {{ paper.Year }}
+          </div>
+          {% endif %}
+        </li>
+        {% assign count = count | plus: 1 %} {% if count == 3 %} {% break %} {%
+        endif %} {% endfor %}
+      </ul>
     </div>
     <h3>Recent Photos</h3>
-    <div class="container-fluid" style="padding: 0em; overflow: hidden; margin-bottom: 20px;">
+    <div
+      class="container-fluid"
+      style="padding: 0em; overflow: hidden; margin-bottom: 20px"
+    >
       <a href="{{site.url}}/photos" class="photo-gallery">
         {% for i in (1..16) %}
-          <img src="./img/photos/2023/({{i}}).jpg" alt="Image {{i}}">
+        <img src="./img/photos/2023/({{i}}).jpg" alt="Image {{i}}" />
         {% endfor %}
       </a>
     </div>

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light fixed-top">
-  <div class="container">
+  <div class="container" style="max-width: none;flex-wrap: nowrap;">
     <div class="navbar-brand-wrapper" style="margin-top:5px; margin-bottom:5px">
       <a class="navbar-brand mb-2 h1" href="/{% if page.language %}{{ page.language }}{% endif %}" title="Home" >
         <img class="logo" src="{{ site.logo | prepend: "/img/default/" | prepend: site.url}}" alt="">
@@ -19,7 +19,7 @@
       {% for menu in menus %}
     	{% unless menu == "" %}
     	<li>
-    		<a class="nav-link" href="{{site.url}}/{% if page.language %}{{ page.language }}/{% endif %}{{ menu }}">
+    		<a class="nav-link" style="font-size: 18px" href="{{site.url}}/{% if page.language %}{{ page.language }}/{% endif %}{{ menu }}">
     			<i class="fa fa-{{my_page.icon}}"></i>{{ menu | capitalize }}
     		</a>
     	</li>
