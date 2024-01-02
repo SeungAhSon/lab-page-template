@@ -10,17 +10,15 @@ mainFig:
     image: "info/frontImg_3.jpg"
 
 introduction: |
-  Vehicular Intelligence Lab is focused on implementation and verification of intelligent transportation system.
-  We are particularly interested in design, implementation, and testing of multimedia transmission by short-range wireless communication networks.
-  Also, we are engaged with multimedia signal processing, theoretically and practically.
-  To deliver multimedia contents through wireless links, background knowledge on communication, computer vision, and networking is required.
-  In order to understand multimedia signal processing, knowledge on image processing is indispensable.
-  If you have knowledge on both areas, you are welcome.
-  If not, you are still welcome on the condition that you will do your best.
-
-  Level of intelligence depends on what you do when you have problems.
-  Goal of research works being carried out by the lab is to elevate your current level of intelligence to higher level.
-  However, we just provide you a chance and the remaining to get a higher level is up to you.
+  Vehicular Intelligence Lab is focused on the implementation and verification of intelligent mobility systems.<br>
+  We are particularly interested in control and perception of mobility.<br>
+  Also, we are engaged with energy management systems, theoretically and practically.<br>
+  To participate in our research, background knowledge on <strong>AI, RL, CV, NLP, Robotics</strong> and/or <strong>Control systems</strong> is required.<br>
+  If you have knowledge of some of these areas, you are welcome.<br>
+  If not, you are still welcome on the condition that you will do your best.<br><br>
+  The level of intelligence depends on what you do when you have problems.<br>
+  The goal of research works being carried out by the lab is to elevate your current level of intelligence to a higher level.<br>
+  However, we just give you a chance, and it's up to you to get to a higher level.<br><br>
 
 affiliation:
   school: 한국과학기술원
