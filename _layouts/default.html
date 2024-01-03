@@ -1,69 +1,87 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  {% include head.html %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-    #topBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-  </style>
-</head>
+      #topBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+    </style>
+  </head>
 
-<body lang="{% if page.language %}{{ page.language }}{% else %}ko{% endif %}" dir="ltr">
-  {% include header.html %}
-	<div id="outbox" class="container" style="max-width: none; width: 100%">
-		<div id="pagebox">
-			{{ content }}
-		</div>
-	</div> <!-- /#outbox -->
-	{% include footer.html %}
+  <body
+    lang="{% if page.language %}{{ page.language }}{% else %}ko{% endif %}"
+    dir="ltr"
+  >
+    {% include header.html %}
+    <div id="outbox" class="container" style="max-width: none; width: 100%">
+      <div id="pagebox">{{ content }}</div>
+    </div>
+    <!-- /#outbox -->
+    {% include footer.html %}
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/6de5009983.js"></script>
-  <!--
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/6de5009983.js"></script>
+    <!--
   <script type="text/javascript" src="{{ "/js/mdb.min.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ "/js/photoswipe.min.js" | prepend: site.baseurl }}"></script>
 -->
 
-  <button id="topBtn" onclick="goToTop()">Top</button>
+    <button id="topBtn" onclick="goToTop()">Top</button>
 
-  <script>
-    window.onscroll = function() {
-      scrollFunction();
-    };
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-    function scrollFunction() {
-      var topBtn = document.getElementById("topBtn");
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
+      function scrollFunction() {
+        var topBtn = document.getElementById("topBtn");
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          topBtn.style.display = "block";
+        } else {
+          topBtn.style.display = "none";
+        }
       }
-    }
 
-    function goToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-</body>
+      function goToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
 </html>

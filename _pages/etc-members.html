@@ -6,6 +6,7 @@
           src="{% if person.portrait %}{{site.url}}/img/{{ person.portrait}}{% elsif person.extportrait %}{{ person.extportrait }}{% else %}{{site.url}}/img/ppl/anonymous.jpg{% endif %}"
           class="card-img"
           alt="..."
+          style="border: 1px solid lightgray"
         />
       </div>
       <div class="card-body">
@@ -23,14 +24,7 @@
 
         <div class="card-text">
           <p style="line-height: 1"></p>
-          <span
-            style="
-              line-height: 1;
-              margin-top: -10px;
-              margin-left: 5px;
-              display: block;
-            "
-          >
+          <span style="line-height: 1; margin-left: 5px; display: block">
             {{ person.bio | newline_to_br | markdownify }}
           </span>
         </div>
