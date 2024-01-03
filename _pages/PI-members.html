@@ -36,28 +36,28 @@
         alt="Google Scholar"
         style="width: 24px; height: 24px"
       />
-      <div class="card-text">
+      <div class="card-text" style="margin-top: 10px">
         <hr />
-        <p style="margin-bottom: 1px; display: block">
+        <p style="margin-top: 5px; margin-bottom: 1px; display: block">
           <strong>Bio:</strong> {{ person.bio | newline_to_br | markdownify }}
         </p>
         <hr />
-        <p style="margin-bottom: 1px; display: block">
+        <p style="margin-top: 5px; margin-bottom: 1px; display: block">
           <strong>Work Experience:</strong> {{ person.Work | newline_to_br |
           markdownify }}
         </p>
         <hr />
-        <p style="margin-bottom: 1px; display: block">
+        <p style="margin-top: 5px; margin-bottom: 1px; display: block">
           <strong>Research Interests:</strong> {{ person.Research |
           newline_to_br | markdownify }}
         </p>
         <hr />
-        <p style="margin-bottom: 1px; display: block">
+        <p style="margin-top: 5px; margin-bottom: 1px; display: block">
           <strong>Honors:</strong>
           {{ person.Honors_and_Awards.Honors | newline_to_br |markdownify }}
         </p>
         <hr />
-        <p style="margin-bottom: 1px; display: block">
+        <p style="margin-top: 5px; margin-bottom: 1px; display: block">
           <strong>Best Paper Awards:</strong>
           {{ person.Honors_and_Awards.Awards | newline_to_br |markdownify }}
         </p>
