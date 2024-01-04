@@ -81,7 +81,7 @@ layout: default
     </header>
     {% endif %} {% for item in site.data.notice %} {% if item.status == "open"
     %}
-    <div id="notice" class="shadow-lg mb-3">
+    <div id="notice" class="shadow-lg mb-3" style="border-radius: 10px;">
       <div class="jumbotron">
         <h4>{{ item.title }}</h4>
         <p>{{ item.notice }}</p>
@@ -103,7 +103,7 @@ layout: default
       id="carouselIndicators"
       class="carousel slide shadow"
       data-ride="carousel"
-      style="margin-top: 10px; margin-bottom: 20px"
+      style="margin-bottom: 20px; border-radius: 10px;"
     >
       <ol class="carousel-indicators">
         {% for fig in site.data.info.mainFig %}
@@ -121,7 +121,7 @@ layout: default
         {% endfor %}
       </ol>
 
-      <div class="carousel-inner">
+      <div class="carousel-inner" style="border-radius: 10px;">
         {% for fig in site.data.info.mainFig %}
         <div class="carousel-item {% if forloop.first %}active{% endif %}">
           <div class="row" style="margin: 0px">
@@ -163,7 +163,7 @@ layout: default
     </div>
 
     <h3>Recent Publications</h3>
-    <div id="publications" class="container-fluid">
+    <div id="publications" class="container-fluid" style="border-radius: 10px;">
       <ul class="card-body" style="padding: 1rem; margin-left: 20px">
         {% assign count = 0 %} {% for paper in site.data.publications %}
         <li class="mb-2">
@@ -196,11 +196,11 @@ layout: default
     <h3>Recent Photos</h3>
     <div
       class="container-fluid"
-      style="padding: 0em; overflow: hidden; margin-bottom: 20px"
+      style="padding: 0em; overflow: hidden; margin-bottom: 20px; border-radius: 10px;"
     >
       <a href="{{site.url}}/photos" class="photo-gallery">
         {% for i in (1..16) %}
-        <img src="./img/photos/2023/({{i}}).jpg" alt="Image {{i}}" />
+        <img src="./img/photos/2023/({{i}}).jpg" alt="Image {{i}}" style="border-radius: 5px;" />
         {% endfor %}
       </a>
     </div>
