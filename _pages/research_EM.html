@@ -1,0 +1,27 @@
+<div class="nav-item col-12" style="text-align: center">
+  <div class="Energy-tab-content">
+    <button class="research_button" data-img-id="img10">
+      P2P Power Trading Algorithm Considering Battery Lifetime
+    </button>
+    <button class="research_button" data-img-id="img11">
+      Multi-EV Charging Strategy in Automatic Charging System
+    </button>
+  </div>
+  <img
+    id="energy-image"
+    src="{{site.url}}/img/research/button_EM.png"
+    alt="..."
+  />
+</div>
+
+<div class="nav-item col-12" style="text-align: center">
+  {% for topic in site.data.research %} {% if topic.subject == "Energy" %}
+  <div class="card-group col-12" style="margin-top: 10px; margin-bottom: 10px">
+    <img
+      id="{{ topic.data-img-id }}"
+      src="../img/{{topic.fig}}"
+      class="card-img shadow"
+    />
+  </div>
+  {% endif %} {% endfor %}
+</div>

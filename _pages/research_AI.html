@@ -1,0 +1,32 @@
+<div class="nav-item col-12" style="text-align: center">
+  <div class="AI-tab-content">
+    <button class="research_button" data-img-id="img2">
+      Multi-agent Reinforcement Learning Algorithm
+    </button>
+    <button class="research_button" data-img-id="img3">
+      Predicting Traffic Accidents using DL
+    </button>
+    <button class="research_button" data-img-id="img5">
+      Smart city Mobility Service using Multimodal data
+    </button>
+    <button class="research_button" data-img-id="img6">
+      Robust Monocular Depth Estimation
+    </button>
+    <button class="research_button" data-img-id="img7">
+      Multi-Robot control through NLP
+    </button>
+  </div>
+  <img id="ai-image" src="{{site.url}}/img/research/button_AI.png" alt="..." />
+</div>
+
+<div class="nav-item col-12" style="text-align: center">
+  {% for topic in site.data.research %} {% if topic.subject == "AI" %}
+  <div class="card-group col-12" style="margin-top: 10px; margin-bottom: 10px">
+    <img
+      id="{{topic.data-img-id}}"
+      src="../img/{{topic.fig}}"
+      class="card-img shadow"
+    />
+  </div>
+  {% endif %} {% endfor %}
+</div>
