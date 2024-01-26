@@ -1,27 +1,40 @@
-<div class="nav-item col-12" style="text-align: center">
-  <div class="Energy-tab-content">
-    <button class="research_button" data-img-id="img10">
-      P2P Power Trading Algorithm Considering Battery Lifetime
-    </button>
-    <button class="research_button" data-img-id="img11">
-      Multi-EV Charging Strategy in Automatic Charging System
-    </button>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<div id="myTabs2" class="nav-item col-12" style="text-align: center">
+  <div class="research_button_bg_em">
+    <p style="margin-top: 15px">Energy Management</p>
+    <div class="row" style="margin-bottom: 10px; width: 100%">
+      <a class="research_button" id="EM10-tab" data-toggle="tab" href="#img10">
+        Residential Power Management
+      </a>
+      <a class="research_button" id="EM12-tab" data-toggle="tab" href="#img12">
+        Industrial Power Management
+      </a>
+      <a class="research_button" id="EM11-tab" data-toggle="tab" href="#img11">
+        Wireless Sensor Network
+      </a>
+    </div>
   </div>
-  <img
-    id="energy-image"
-    src="{{site.url}}/img/research/button_EM.png"
-    alt="..."
-  />
 </div>
 
-<div class="nav-item col-12" style="text-align: center">
-  {% for topic in site.data.research %} {% if topic.subject == "Energy" %}
-  <div class="card-group col-12" style="margin-top: 10px; margin-bottom: 10px">
-    <img
-      id="{{ topic.data-img-id }}"
-      src="../img/{{topic.fig}}"
-      class="card-img shadow"
-    />
+<div
+  class="tab-content col-12"
+  style="text-align: center; display: block; margin-top: 20px"
+>
+  {% for topic in site.data.research %} {% if topic.subject == "Energy"%}
+  <div
+    class="tab-pane fade card-group col-12"
+    id="{{topic.data-img-id}}"
+    style="
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: justify;
+      word-break: keep-all;
+    "
+  >
+    {{topic.text}}
   </div>
   {% endif %} {% endfor %}
 </div>
