@@ -125,12 +125,17 @@
 
 #research {
   .card-img {
+    max-width: none;
     width: 80vw;
     display: block;
     margin: 0 auto;
   }
 }
-
+.mini-img {
+  width: 80%;
+  display: block;
+  margin: 20px auto 20px auto;
+}
 #content {
   padding: 0 0 1em 0;
   h1 {
@@ -738,6 +743,7 @@
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+
   height: 38px;
   line-height: 0.8;
   display: flex;
@@ -765,28 +771,93 @@
 
 .AI-tab-content,
 .Energy-tab-content {
-  position: absolute;
-  margin-top: 10%;
-  height: 50%;
+  position: relative;
+  margin-top: 5px;
+  height: 100%;
   left: 2.5%;
   width: 95%;
 }
 .research_button {
-  font-size: min(4vw, 13px);
-  line-height: 12px;
-  position: relative;
-  width: 90%;
-  height: 15%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  outline: 0;
+  padding: 1em 2em 1em 2em;
   margin: auto;
   margin-bottom: 2%;
-  padding: 1em 2em 1em 2em;
-  border: none;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 2em;
-  display: flex;
+
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+  min-width: 23%;
+  font-size: 15px;
   align-items: center;
   justify-content: center;
+  line-height: normal;
+
+  @media screen and (max-width: 750px) {
+    width: 80%;
+  }
 }
-#research .card-img {
-  max-width: none;
+.research_button2 {
+  background-color: #0095ff;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  display: flex;
+  outline: 0;
+  padding: 5px 15px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 45%;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+
+  @media screen and (max-width: 750px) {
+    width: 80%;
+  }
+}
+.research_button2:active {
+  background-color: darkblue;
+}
+
+.research_button_bg_ai {
+  height: max-content;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: bolder;
+
+  background-image: url("../img/research/button_AI.png");
+  background-position: center top;
+  overflow: hidden;
+  border-radius: 1em;
+}
+
+.research_button_bg_em {
+  height: max-content;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  font-weight: bolder;
+  color: #ffffff;
+
+  background-image: url("../img/research/button_AI.png");
+  background-position: center top;
+  overflow: hidden;
+  border-radius: 1em;
 }

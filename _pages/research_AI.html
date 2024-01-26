@@ -1,32 +1,45 @@
-<div class="nav-item col-12" style="text-align: center">
-  <div class="AI-tab-content">
-    <button class="research_button" data-img-id="img2">
-      Multi-agent Reinforcement Learning Algorithm
-    </button>
-    <button class="research_button" data-img-id="img3">
-      Predicting Traffic Accidents using DL
-    </button>
-    <button class="research_button" data-img-id="img5">
-      Smart city Mobility Service using Multimodal data
-    </button>
-    <button class="research_button" data-img-id="img6">
-      Robust Monocular Depth Estimation
-    </button>
-    <button class="research_button" data-img-id="img7">
-      Multi-Robot control through NLP
-    </button>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<div id="myTabs2" class="nav-item col-12" style="text-align: center">
+  <div class="research_button_bg_ai">
+    <p style="margin-top: 15px">Artificial Intelligence</p>
+    <div class="row" style="margin-bottom: 10px; width: 100%">
+      <a class="research_button" id="AI5-tab" data-toggle="tab" href="#img5">
+        Reinforcement Learning
+      </a>
+      <a class="research_button" id="AI3-tab" data-toggle="tab" href="#img4">
+        Computer Vision
+      </a>
+      <a class="research_button" id="AI1-tab" data-toggle="tab" href="#img2">
+        ADAS
+      </a>
+      <a class="research_button" id="AI2-tab" data-toggle="tab" href="#img3">
+        Accident Prevention
+      </a>
+    </div>
   </div>
-  <img id="ai-image" src="{{site.url}}/img/research/button_AI.png" alt="..." />
 </div>
 
-<div class="nav-item col-12" style="text-align: center">
-  {% for topic in site.data.research %} {% if topic.subject == "AI" %}
-  <div class="card-group col-12" style="margin-top: 10px; margin-bottom: 10px">
-    <img
-      id="{{topic.data-img-id}}"
-      src="../img/{{topic.fig}}"
-      class="card-img shadow"
-    />
+<div
+  class="tab-content col-12"
+  style="text-align: center; display: block; margin-top: 20px"
+>
+  {% for topic in site.data.research %} {% if topic.subject == "AI"%}
+  <div
+    class="tab-pane fade card-group col-12"
+    id="{{topic.data-img-id}}"
+    style="
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: justify;
+      word-break: keep-all;
+    "
+  >
+    {% if topic.title %}
+    <h2 style="font-weight: bold">{{ topic.title }}</h2>
+    {% endif %} {{topic.text}}
   </div>
   {% endif %} {% endfor %}
 </div>
