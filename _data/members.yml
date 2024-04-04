@@ -134,30 +134,6 @@ Members:
     google_scholar: FlF_MsEAAAAJ
 
   - name: 
-    engName: Bumgeun Park
-    degree:
-    bio: |
-      &bull; Exploration in Reinforcement Learning
-      &bull; Off-policy Reinforcement Learning 
-    period:
-    jobtitle: M.S. Candidate
-    portrait: ../img/ppl/j4t123.gif
-    e-mail: j4t123@kaist.ac.kr
-    google_scholar: O2dZoA8AAAAJ
-
-  - name: 
-    engName: Woohyeon Moon
-    degree:
-    bio: |
-      &bull; Transformer in Natural Language Processing
-      &bull; Robot Path Planning with Reinforcement Learning 
-    period:
-    jobtitle: M.S. Candidate
-    portrait: ../img/ppl/mwh510.jpg
-    e-mail: moonstar@kaist.ac.kr
-    google_scholar: FWmjhUQAAAAJ&hl=ko
-
-  - name: 
     engName: Jihui Lee
     degree:
     bio: |
@@ -211,13 +187,13 @@ Members:
     google_scholar: 
 
   - name: 
-    engName: Taemin Kang
+    engName: Taemin Kang 
     degree:
     bio: |
       &bull; Robotics
-      &bull; Artificial Intelligence
-      &bull; Multi-agent System 
-    period:
+      &bull; Task Planning
+      &bull; Reinforcement Learning 
+    period: Student Representative
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/Taemin.jpg
     e-mail: tmkang9826@kaist.ac.kr
@@ -261,7 +237,7 @@ Past:
     engName: Luiz Felipe Santos Vecchietti
     degree: 
     period: 
-    bio: 기초과학연구원(ibs)
+    bio: 기초과학연구원 (IBS)
     jobtitle: Ph.D.
     portrait: ../img/ppl/lfelipesv.gif
     e-mail: 
@@ -415,4 +391,24 @@ Past:
     jobtitle: M.S.
     portrait: ../img/ppl/sumitmishra209.gif
     e-mail: 
+    google_scholar: 
+
+  - name: 
+    engName: Bumgeun Park
+    degree:
+    bio: 박사진학
+    period:
+    jobtitle: M.S.
+    portrait: ../img/ppl/j4t123.gif
+    e-mail: 
+    google_scholar: 
+
+  - name: 
+    engName: Woohyeon Moon
+    degree:
+    bio: 한화시스템 (Hanwha Systems)
+    period:
+    jobtitle: M.S. 
+    portrait: ../img/ppl/mwh510.jpg
+    e-mail:
     google_scholar: 

@@ -34,6 +34,11 @@
         </div>
 
         <div class="jobtitle">
+          {% if person.period %}
+          <code style="background-color: #027da0">{{person.period}} </code>
+          <br />
+          {% endif %}
+
           <code>{{person.jobtitle}}</code>
           {% if person.e-mail %}
           <i
