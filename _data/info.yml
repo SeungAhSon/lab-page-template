@@ -4,7 +4,7 @@ mainFig:
     image: "info/frontImg_5.jpg"
   - title: "Welcome to our Lab!"
     description: Vehicular<br/> Intelligence<br/> Lab
-    image: "info/frontImg_4.jpg"
+    image: "info/frontImg_7.jpg"
 
 introduction: |
   Vehicular Intelligence Lab is focused on the implementation and verification of intelligent mobility systems.<br>
