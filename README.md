@@ -3,7 +3,10 @@
 https://github.com/ChungLab/lab-page-template
 코드를 베이스로 작성되었습니다.
 
+변경사항 - 디자인 수정 및 일부 페이지 추가
+
 ```
+<<ASCII art by Tam>>
    ____     ____     _____      ___
   /   /|   /   /|   /    /|    /  /|
   @@@@ |   @@@@ |   @@@@@ /    @@@ |
