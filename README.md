@@ -29,3 +29,13 @@ https://github.com/ChungLab/lab-page-template
        @@@ /        @@@@@ /    @@@@@@@@@@@@/
 ```
 헤헷
+
+
+## github codespace에서 돌리는 법
+
+이미지 로드 시 에러 뜰 수 있음
+
+```
+bundle install
+bundle exec jekyll server
+```
