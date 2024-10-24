@@ -93,18 +93,18 @@ Members:
     e-mail: sarvar@kaist.ac.kr
     google_scholar: 8nbdrIAAAAAJ
 
-  - name:
-    engName: Lai Dang Quoc Vinh
-    degree:
-    bio: |
-      &bull; Deep Learning
-      &bull; Computer Vision
-      &bull; Autonomous Driving 
-    period:
-    jobtitle: Ph.D. Candidate
-    portrait: ../img/ppl/20214194.gif
-    e-mail: ldqvinh@kaist.ac.kr
-    google_scholar: 89O1KmgAAAAJ
+  #- name:
+  #  engName: Lai Dang Quoc Vinh
+  #  degree:
+  #  bio: |
+  #    &bull; Deep Learning
+  #    &bull; Computer Vision
+  #    &bull; Autonomous Driving 
+  #  period:
+  #  jobtitle: Ph.D. Candidate
+  #  portrait: ../img/ppl/20214194.gif
+  #  e-mail: ldqvinh@kaist.ac.kr
+  #  google_scholar: 89O1KmgAAAAJ
 
   - name:
     engName: Mishra Sumit
@@ -132,19 +132,6 @@ Members:
     portrait: ../img/ppl/Neha.gif
     e-mail: neha.sengar@kaist.ac.kr
     google_scholar: FlF_MsEAAAAJ
-
-  - name: 
-    engName: Jihui Lee
-    degree:
-    bio: |
-      &bull; Deep Learning
-      &bull; Computer Vision
-      &bull; Perception for Autonomous Driving 
-    period:
-    jobtitle: M.S. Candidate
-    portrait: ../img/ppl/wlgml0920.gif
-    e-mail: jihui@kaist.ac.kr
-    google_scholar: 
 
   - name: 
     engName: Seungah Son
@@ -421,4 +408,17 @@ Past:
     jobtitle: M.S. 
     portrait: ../img/ppl/mwh510.jpg
     e-mail:
+    google_scholar: 
+
+  - name: 
+    engName: Jihui Lee
+    degree:
+    #bio: |
+    #  &bull; Deep Learning
+    #  &bull; Computer Vision
+    #  &bull; Perception for Autonomous Driving 
+    period:
+    jobtitle: M.S. 
+    portrait: ../img/ppl/wlgml0920.gif
+    e-mail: jihui@kaist.ac.kr
     google_scholar: 
