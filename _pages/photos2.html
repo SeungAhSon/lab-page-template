@@ -24,7 +24,7 @@
   >
     {% for i in (column1_start..column1_end) %}
     <div class="card">
-      <img src="{{ site.url }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
+      <img src="{{ site.baseurl }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
     </div>
     {% endfor %}
   </div>
@@ -35,7 +35,7 @@
   >
     {% for i in (column2_start..column2_end) %}
     <div class="card">
-      <img src="{{ site.url }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
+      <img src="{{ site.baseurl }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
     </div>
     {% endfor %}
   </div>
@@ -46,7 +46,7 @@
   >
     {% for i in (column3_start..column3_end) %}
     <div class="card">
-      <img src="{{ site.url }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
+      <img src="{{ site.baseurl }}{{ img_dir }}({{ i }}).{{extension}}" class="card-img" alt="..." />
     </div>
     {% endfor %}
   </div>
