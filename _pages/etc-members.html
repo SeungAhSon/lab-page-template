@@ -3,7 +3,7 @@
     <div class="row no-gutters person">
       <div class="portrait">
         <img
-          src="{% if person.portrait %}{{site.url}}/img/{{ person.portrait}}{% elsif person.extportrait %}{{ person.extportrait }}{% else %}{{site.url}}/img/ppl/anonymous.jpg{% endif %}"
+          src="{% if person.portrait %}{{site.baseurl}}/img/{{ person.portrait}}{% elsif person.extportrait %}{{ person.extportrait }}{% else %}{{site.baseurl}}/img/ppl/anonymous.jpg{% endif %}"
           class="card-img"
           alt="..."
           style="border: 1px solid lightgray"
@@ -34,7 +34,7 @@
           {% if person.google_scholar %}
           <img
             onclick="window.open('https://scholar.google.com/citations?user={{ person.google_scholar }}');"
-            src="{{site.url}}/img/default/google_scholar.png"
+            src="{{site.baseurl}}/img/default/google_scholar.png"
             alt="Google Scholar"
             style="width: 24px; height: 24px"
           />

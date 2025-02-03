@@ -28,12 +28,23 @@ https://github.com/ChungLab/lab-page-template
       @@@@@ /        @@@ |_    @@@ /        |
        @@@ /        @@@@@ /    @@@@@@@@@@@@/
 ```
-헤헷
 
 
 ## github codespace에서 돌리는 법
 
 이미지 로드 시 에러 뜰 수 있음
+
+로컬에서 확인할 때 _config.yml 파일에 아래 라인을 추가할 것.
+
+Push할 때 제거 필요.
+
+```
+url: "https://special-winner-xv4r6w5pw44fprxr-4000.app.github.dev/"
+```
+
+터미널에서 아래 명령어 치기.
+
+bundle install은 코드스페이스 처음 수행할 때만 필수.
 
 ```
 bundle install
