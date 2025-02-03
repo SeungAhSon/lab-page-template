@@ -70,6 +70,42 @@ Members:
   #  portrait: ../img/ppl/20214194.gif
   #  e-mail: ldqvinh@kaist.ac.kr
   #  google_scholar: 89O1KmgAAAAJ
+  - name: 
+    engName: Taemin Kang 
+    degree:
+    bio: |
+      &bull; Robotics
+      &bull; Reinforcement Learning 
+    period: Student Representative
+    jobtitle: M.S. Candidate
+    portrait: ../img/ppl/Taemin.jpg
+    e-mail: tmkang9826@kaist.ac.kr
+    google_scholar: 
+  
+  - name: 
+    engName: Hojun Jin
+    degree:
+    bio: |
+      &bull; Smart Grid Technologies
+      &bull; Scheduling Optimization of Power Systems
+    period:
+    jobtitle: Post Doc
+    portrait: ../img/ppl/horang1976.gif
+    e-mail: hjjin1995@kaist.ac.kr
+    google_scholar: -SC_1hwAAAAJ&hl=ko&oi=ao
+
+  - name: 
+    engName: Taeyoung Kim
+    degree:
+    bio: |
+      &bull; Multi-goal Reinforcement Learning
+      &bull; Robotics
+      &bull; Artificial Intelligence 
+    period:
+    jobtitle: Post Doc
+    portrait: ../img/ppl/ngng9957.gif
+    e-mail: ngng9957@kaist.ac.kr
+    google_scholar: 9_cTJZ4AAAAJ
 
   - name:
     engName: Mishra Sumit
@@ -98,19 +134,6 @@ Members:
     e-mail: neha.sengar@kaist.ac.kr
     google_scholar: FlF_MsEAAAAJ
 
-  - name: 
-    engName: Taemin Kang 
-    degree:
-    bio: |
-      &bull; Robotics
-      &bull; Task Planning
-      &bull; Reinforcement Learning 
-    period: Student Representative
-    jobtitle: M.S. Candidate
-    portrait: ../img/ppl/Taemin.jpg
-    e-mail: tmkang9826@kaist.ac.kr
-    google_scholar: 
-
   - name:
     engName: Andres Saurez
     degree:
@@ -127,7 +150,9 @@ Members:
   - name: 
     engName: Jungho Ahn
     degree:
-    bio:
+    bio: |
+      &bull; Robotics
+      &bull; Reinforcement Learning
     period:
     jobtitle: M.S. Candidate
     portrait: ../img/ppl/ajh427.jpg
