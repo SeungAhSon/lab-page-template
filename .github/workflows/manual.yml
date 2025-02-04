@@ -6,7 +6,7 @@ on:
 
 jobs:
   sync:
-    name: Sync forked repo
+    name: Sync SeungAhSon repo to kaist-vil.github.io
     runs-on: ubuntu-latest
 
     steps:
@@ -15,18 +15,18 @@ jobs:
         with: 
           token: ${{ secrets.MY_REPO_TOKEN }}
           fetch-depth: 0
-          ref: main
+          ref: master
 
-      - name: Add remote-url
+      - name: Add remote URL for KAIST-VIL repo
         run: |
-          git remote add forked-repo https://KAIST-VIL:${{ secrets.FORKED_REPO_TOKEN }}@github.com/KAIST-VIL/kaist-vil.github.io
+          git remote add kaist-vil https://KAIST-VIL:${{ secrets.MY_REPO_TOKEN }}@github.com/KAIST-VIL/kaist-vil.github.io
           git config user.name SeungAhSon
           git config user.email gongsoonyee@gmail.com
       
-      - name: Push changes to forked-repo 
+      - name: Push changes to kaist-vil.github.io repo
         run: |
-          git push -f forked-repo main
+          git push -f kaist-vil master
       
-      - name: Clean up
+      - name: Clean up remote
         run: |
-          git remote remove forked-repo
+          git remote remove kaist-vil
