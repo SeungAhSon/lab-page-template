@@ -19,7 +19,7 @@ jobs:
 
       - name: Add remote-url
         run: |
-          git remote add forked-repo https://KAIST-VIL:${{ secrets.FORKED_REPO_TOKEN }}@github.com/KAIST-VIL/lab-page-template
+          git remote add forked-repo https://KAIST-VIL:${{ secrets.FORKED_REPO_TOKEN }}@github.com/KAIST-VIL/kaist-vil.github.io
           git config user.name SeungAhSon
           git config user.email gongsoonyee@gmail.com
       
