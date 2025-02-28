@@ -160,13 +160,14 @@ Members:
     google_scholar: 
 
   - name:
-    engName: New
+    engName: Yusung Lee
     degree:
-    bio:
+    bio: |
+      &bull; TBD
     period:
     jobtitle: M.S. Candidate
-    portrait: 
-    e-mail: temp
+    portrait: ../img/ppl/Leeyusung.jpg
+    e-mail: yslee410@kaist.ac.kr
     google_scholar: 
 
 Past:
