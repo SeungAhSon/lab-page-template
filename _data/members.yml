@@ -82,17 +82,17 @@ Members:
     e-mail: tmkang9826@kaist.ac.kr
     google_scholar: 
   
-  - name: 
-    engName: Hojun Jin
-    degree:
-    bio: |
-      &bull; Smart Grid Technologies
-      &bull; Scheduling Optimization of Power Systems
-    period:
-    jobtitle: Post Doc
-    portrait: ../img/ppl/Hojun.gif
-    e-mail: hjjin1995@kaist.ac.kr
-    google_scholar: -SC_1hwAAAAJ&hl=ko&oi=ao
+  # - name: 
+  #   engName: Hojun Jin
+  #   degree:
+  #   bio: |
+  #     &bull; Smart Grid Technologies
+  #     &bull; Scheduling Optimization of Power Systems
+  #   period:
+  #   jobtitle: Post Doc
+  #   portrait: ../img/ppl/Hojun.gif
+  #   e-mail: hjjin1995@kaist.ac.kr
+  #   google_scholar: -SC_1hwAAAAJ&hl=ko&oi=ao
 
   - name: 
     engName: Taeyoung Kim
